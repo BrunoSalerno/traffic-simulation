@@ -87,33 +87,29 @@ for runs in range(number_runs):
 
 traci.close()  # closing simulation
 
-print("Final stats:")
-table = [('Mean speed', all_speeds),
-         ('Variance', all_variances),
-         ('Cum departed', all_departed),
-         ('Cum loaded', all_loaded)]
-df = pd.DataFrame.from_items(table)
+minutes = np.arange(16, 16 + len(all_speeds)).tolist()
 
+df = pd.DataFrame({
+    'mean_speed': all_speeds,
+    'variance': all_variances,
+    'cum_departed': all_departed
+    }, index=minutes)
+
+print("Final stats:")
 print(df)
+
 fig, (p1,p2,p3) = plt.subplots(3,1,sharex=False, sharey=False)
-p1.hist(all_speeds, bins="auto")
-p1.set_title("Avg speed - 1 run")
+
+df['mean_speed'].hist(ax=p1)
+p1.set_title("Avg speed (m/s) - 1 run")
 p1.set_xlabel("Speed - m/s")
 p1.set_ylabel("Frequency")
 
-p2.plot(all_variances)
-p2.set_xlabel("Iteration (min)")
-p2.set_ylabel("Var. speed - (m/s)^2")
+df['variance'].plot(ax=p2, use_index=True)
+p2.set_xlabel("Minute")
+p2.set_ylabel("Variance - (m/s)^2")
 
-#plt.subplot(3,1,3)
-#p3.plot(all_n_vehicles)
-#p3.set_title("Vehicles added - {} runs".format(number_runs))
-#p3.set_xlabel("Iteration (min)")
-#p3.set_ylabel("No. of vehicles")
-
-p3.plot(all_departed, label="departed")
-p3.plot(all_loaded, label="loaded")
-p3.set_xlabel("Iteration (min)")
-p3.set_ylabel("Cum. departed vs loaded vehicles")
-plt.legend()
+df['cum_departed'].plot(ax=p3, use_index=True)
+p3.set_xlabel("Minute")
+p3.set_ylabel("Cum. departed vehicles")
 plt.show()
