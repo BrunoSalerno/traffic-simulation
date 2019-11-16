@@ -24,7 +24,7 @@ def generateRandomVehicles(rate, maxtime, routeid, veh_type):
     while tdep <= maxtime:
         tint = -math.log(random.random()) / rate
         tdep += tint
-        vehseq.append('<vehicle depart="{}" id="veh{}" route="{}" type="{}" departLane="free"/>'.format(tdep, vehid, routeid, veh_type))
+        vehseq.append('<vehicle depart="{}" id="veh{}" route="{}" type="{}" departLane="{}" departSpeed="{}"/>'.format(tdep, vehid, routeid, veh_type, 'free', 'desired'))
         vehid += 1
 
     vehseq.append('</routes>')
