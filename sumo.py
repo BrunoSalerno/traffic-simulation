@@ -37,6 +37,7 @@ last_simulation_step = 36001
 
 all_speeds = []
 all_variances = []
+all_cum_variances = []
 all_departed = []
 
 print ("TOTAL RUNS {}".format(number_runs))
@@ -74,6 +75,7 @@ for runs in range(number_runs):
     all_departed.append(departed)
     all_speeds.append(mean_speed)
     all_variances.append(var_speed)
+    all_cum_variances.append(np.var(all_speeds))
 
     print ("Simulation Run Number {} has ended".format(runs + 1))
 
@@ -84,24 +86,29 @@ traci.close()  # closing simulation
 df = pd.DataFrame({
     'mean_speed': all_speeds,
     'variance': all_variances,
+    'cum_variance': all_cum_variances,
     'departed': all_departed
     }, index=np.arange(1, number_runs + 1).tolist())
 
 print("Final stats:")
 print(df)
 
-fig, (p1,p2,p3) = plt.subplots(3,1,sharex=False, sharey=False)
+fig, (p1,p2,p3,p4) = plt.subplots(4,1,sharex=False, sharey=False)
 
 df['mean_speed'].hist(ax=p1)
 p1.set_title("Avg speed (m/s) - {} runs".format(number_runs))
 p1.set_xlabel("Speed - m/s")
 p1.set_ylabel("Frequency")
 
-df['variance'].plot(ax=p2, use_index=True)
+df['variance'].plot(ax=p2, use_index=True, label="variance")
 p2.set_xlabel("Simulation")
 p2.set_ylabel("Variance - (m/s)^2")
 
-df['departed'].plot(ax=p3, use_index=True)
+df['cum_variance'].plot(ax=p3, use_index=True, label="cum. variance")
 p3.set_xlabel("Simulation")
-p3.set_ylabel("Departed vehicles")
+p3.set_ylabel("Cum variance - (m/s)^2")
+
+df['departed'].plot(ax=p4, use_index=True)
+p4.set_xlabel("Simulation")
+p4.set_ylabel("Departed vehicles")
 plt.show()
