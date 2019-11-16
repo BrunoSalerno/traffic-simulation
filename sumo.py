@@ -82,25 +82,27 @@ for runs in range(number_runs):
 
 traci.close()  # closing simulation
 
+df = pd.DataFrame({
+    'mean_speed': all_speeds,
+    'variance': all_variances,
+    'cum_departed': all_departed
+    }, index=np.arange(1, number_runs + 1).tolist())
+
 print("Final stats:")
-table = [('Mean speed', all_speeds),
-         ('Variance', all_variances),
-         ('Departed', all_departed)]
-df = pd.DataFrame.from_items(table)
 print(df)
 
 fig, (p1,p2,p3) = plt.subplots(3,1,sharex=False, sharey=False)
-p1.hist(all_speeds, bins="auto")
-p1.set_title("Avg speed - {} runs".format(number_runs))
+
+df['mean_speed'].hist(ax=p1)
+p1.set_title("Avg speed (m/s) - {} runs".format(number_runs))
 p1.set_xlabel("Speed - m/s")
 p1.set_ylabel("Frequency")
 
-p2.plot(all_variances)
+df['variance'].plot(ax=p2, use_index=True)
 p2.set_xlabel("Simulation")
-p2.set_ylabel("Variance speed - (m/s)^2")
+p2.set_ylabel("Variance - (m/s)^2")
 
-
-p3.plot(all_departed)
+df['cum_departed'].plot(ax=p3, use_index=True)
 p3.set_xlabel("Simulation")
 p3.set_ylabel("Departed vehicles")
 plt.show()
