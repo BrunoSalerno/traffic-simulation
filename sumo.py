@@ -33,7 +33,6 @@ Simulation example in the following section, update the written code according t
 # for sequential runs, see: http://sumo.dlr.de/wiki/TraCI#Shutdown
 
 number_runs = 20  # number of simulation repetitions
-time_steps = 0.1  # simulation time steps
 last_simulation_step = 36001
 
 all_speeds = []
