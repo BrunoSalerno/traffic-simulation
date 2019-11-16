@@ -1,0 +1,4 @@
+<types>
+  <type id="70kmh" numLanes="3" speed="19.44"/>
+  <type id="40kmh-2lanes" numLanes="2" speed="11.11"/>
+</types>
