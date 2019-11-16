@@ -90,7 +90,7 @@ minutes = np.arange(16, 16 + len(all_speeds)).tolist()
 
 df = pd.DataFrame({
     'mean_speed': all_speeds,
-    'variance': all_variances,
+    'cum_variance': all_variances,
     'cum_departed': all_departed
     }, index=minutes)
 
@@ -104,9 +104,9 @@ p1.set_title("Avg speed (m/s) - 1 run")
 p1.set_xlabel("Speed - m/s")
 p1.set_ylabel("Frequency")
 
-df['variance'].plot(ax=p2, use_index=True)
+df['cum_variance'].plot(ax=p2, use_index=True)
 p2.set_xlabel("Minute")
-p2.set_ylabel("Variance - (m/s)^2")
+p2.set_ylabel("Cum. variance - (m/s)^2")
 
 df['cum_departed'].plot(ax=p3, use_index=True)
 p3.set_xlabel("Minute")
