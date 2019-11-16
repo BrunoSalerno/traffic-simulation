@@ -32,7 +32,7 @@ Simulation example in the following section, update the written code according t
 """
 # for sequential runs, see: http://sumo.dlr.de/wiki/TraCI#Shutdown
 
-number_runs = 5  # number of simulation repetitions
+number_runs = 20  # number of simulation repetitions
 time_steps = 0.1  # simulation time steps
 last_simulation_step = 36001
 
@@ -85,7 +85,7 @@ traci.close()  # closing simulation
 df = pd.DataFrame({
     'mean_speed': all_speeds,
     'variance': all_variances,
-    'cum_departed': all_departed
+    'departed': all_departed
     }, index=np.arange(1, number_runs + 1).tolist())
 
 print("Final stats:")
@@ -102,7 +102,7 @@ df['variance'].plot(ax=p2, use_index=True)
 p2.set_xlabel("Simulation")
 p2.set_ylabel("Variance - (m/s)^2")
 
-df['cum_departed'].plot(ax=p3, use_index=True)
+df['departed'].plot(ax=p3, use_index=True)
 p3.set_xlabel("Simulation")
 p3.set_ylabel("Departed vehicles")
 plt.show()
