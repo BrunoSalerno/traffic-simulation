@@ -40,7 +40,7 @@ def simulation(cmd,outputfile):
     var_speed = np.var(sim_speeds)
 
     f = open(outputfile, "a+")
-    f.write("{},{}\n".format(mean_speed,var_speed))
+    f.write("{},{},{}\n".format(mean_speed,var_speed,departed))
     f.close()
 
 if __name__ == "__main__":
@@ -58,7 +58,7 @@ if __name__ == "__main__":
     start_time = time.time()
     outputfile = "sims_{}process_{}.csv".format(max_process,int(start_time))
     f = open(outputfile, "a+")
-    f.write("mean_speed,variance\n")
+    f.write("mean_speed,variance,departed\n")
     f.close()
 
     print("Creating {}".format(outputfile))
