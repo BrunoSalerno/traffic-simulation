@@ -3,9 +3,17 @@ import traci
 import numpy as np
 import time
 import random
+import sys
+
+def simulation_handler(cmd,outputfile,times):
+    for i in range(times):
+        simulation(cmd, outputfile)
 
 def simulation(cmd,outputfile):
-    traci.start(cmd)
+    seed = int((random.random() * 100000) + time.time())
+    print ("seed: {}".format(seed))
+
+    traci.start(cmd + ['--seed', str(seed)])
     i = 1
     laststep = 36001
     minutes = 0
@@ -47,28 +55,33 @@ if __name__ == "__main__":
 
     sumo_exe = "sumo"
     conf_file = "config.xml"  # the configuration file
+    sumo_cmd = [sumo_exe, "-c", conf_file]
 
     procs = []
     n_processors = multiprocessing.cpu_count()
-    max_process = n_processors
-
-    print("{} processors".format(n_processors))
-    print("{} processes".format(max_process))
+    max_process = int(sys.argv[1]) if len(sys.argv) >= 2 else n_processors
+    n_runs = int(sys.argv[2]) if len(sys.argv) >= 3 else max_process
+    runs_per_process = n_runs / max_process
 
     start_time = time.time()
-    outputfile = "sims_{}process_{}.csv".format(max_process,int(start_time))
+    outputfile = "sims_{}process_{}runs_{}.csv".format(max_process,n_runs,int(start_time))
+
+    print("Info about the simulation:")
+    print("{} processors".format(n_processors))
+    print("{} processes".format(max_process))
+    print("{} total runs".format(n_runs))
+    print("{} runs per process".format(runs_per_process))
+    print("Output file: {}".format(outputfile))
+    continue_or_not = raw_input("Press N to cancel...")
+    if continue_or_not == 'N':
+        sys.exit()
+
     f = open(outputfile, "a+")
     f.write("mean_speed,variance,departed\n")
     f.close()
 
-    print("Creating {}".format(outputfile))
-
     for i in range(1, max_process):
-        seed = int((random.random() * 100000) + time.time())
-        print ("seed: {}".format(seed))
-        sumo_cmd = [sumo_exe, "-c", conf_file, '--seed', str(seed)]
-
-        proc = multiprocessing.Process(target=simulation, args=(sumo_cmd,outputfile))
+        proc = multiprocessing.Process(target=simulation_handler, args=(sumo_cmd,outputfile,runs_per_process))
         procs.append(proc)
         proc.start()
 
