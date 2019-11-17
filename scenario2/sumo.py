@@ -69,7 +69,8 @@ for runs in range(number_runs):
             # Warm-up check (15 min threshold)
             if counter > 15:
                 for link in link_speeds:
-                    link_speeds[link].append(1000/traci.edge.getTraveltime(link))
+                    link_mean_speed = traci.edge.getLastStepMeanSpeed(link)
+                    link_speeds[link].append(link_mean_speed)
                 
                 vehicles_ids = traci.vehicle.getIDList()
                 speeds = []
