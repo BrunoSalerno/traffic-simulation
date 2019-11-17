@@ -66,15 +66,21 @@ if __name__ == "__main__":
     start_time = time.time()
     outputfile = "sims_{}process_{}runs_{}.csv".format(max_process,n_runs,int(start_time))
 
+    interactive = True
+    if len(sys.argv) >=4 and sys.argv[3] == '--no-interactive':
+        interactive = False
+
+
     print("Info about the simulation:")
     print("{} processors".format(n_processors))
     print("{} processes".format(max_process))
     print("{} total runs".format(n_runs))
     print("{} runs per process".format(runs_per_process))
     print("Output file: {}".format(outputfile))
-    continue_or_not = raw_input("Press N to cancel...")
-    if continue_or_not == 'N':
-        sys.exit()
+    if interactive:
+        continue_or_not = raw_input("Press N to cancel...")
+        if continue_or_not == 'N':
+            sys.exit()
 
     f = open(outputfile, "a+")
     f.write("mean_speed,variance,departed\n")
