@@ -55,7 +55,8 @@ if __name__ == "__main__":
     print("{} processors".format(n_processors))
     print("{} processes".format(max_process))
 
-    outputfile = "sims_{}process_{}.csv".format(max_process,int(time.time()))
+    start_time = time.time()
+    outputfile = "sims_{}process_{}.csv".format(max_process,int(start_time))
     f = open(outputfile, "a+")
     f.write("mean_speed,variance\n")
     f.close()
@@ -75,3 +76,5 @@ if __name__ == "__main__":
         proc.join()
 
 
+    end_time = time.time()
+    print("ELAPSED TIME: {}".format(end_time - start_time))
