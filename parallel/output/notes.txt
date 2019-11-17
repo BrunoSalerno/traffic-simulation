@@ -1,0 +1,5 @@
+48 runs in 48 processes:
+68.0538289547
+
+1000 runs in 48 processes:
+1296.28842807 seconds
