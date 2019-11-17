@@ -1,8 +1,10 @@
 import multiprocessing
 import traci
 import numpy as np
+import time
+import random
 
-def simulation(cmd):
+def simulation(cmd,outputfile):
     traci.start(cmd)
     i = 1
     laststep = 36001
@@ -36,15 +38,15 @@ def simulation(cmd):
 
     mean_speed = np.mean(sim_speeds)
     var_speed = np.var(sim_speeds)
-    print("Mean speed: {}".format(mean_speed))
-    print("Variance: {}".format(var_speed))
-    print("Departed: {}".format(departed))
+
+    f = open(outputfile, "a+")
+    f.write("{},{}\n".format(mean_speed,var_speed))
+    f.close()
 
 if __name__ == "__main__":
 
     sumo_exe = "sumo"
     conf_file = "config.xml"  # the configuration file
-    sumo_cmd = [sumo_exe, "-c", conf_file, '--random']
 
     procs = []
     n_processors = multiprocessing.cpu_count()
@@ -53,10 +55,23 @@ if __name__ == "__main__":
     print("{} processors".format(n_processors))
     print("{} processes".format(max_process))
 
+    outputfile = "sims_{}process_{}.csv".format(max_process,int(time.time()))
+    f = open(outputfile, "a+")
+    f.write("mean_speed,variance\n")
+    f.close()
+
+    print("Creating {}".format(outputfile))
+
     for i in range(1, max_process):
-        proc = multiprocessing.Process(target=simulation, args=(sumo_cmd,))
+        seed = int((random.random() * 100000) + time.time())
+        print ("seed: {}".format(seed))
+        sumo_cmd = [sumo_exe, "-c", conf_file, '--seed', str(seed)]
+
+        proc = multiprocessing.Process(target=simulation, args=(sumo_cmd,outputfile))
         procs.append(proc)
         proc.start()
 
     for proc in procs:
         proc.join()
+
+
