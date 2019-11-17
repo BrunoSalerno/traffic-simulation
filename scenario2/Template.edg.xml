@@ -4,7 +4,4 @@
 <edge from="nd3" to="nd4" id="link3" type="70kmh"/>
 <edge from="nd4" to="nd5" id="link4" type="70kmh"/>
 <edge from="nd5" to="nd6" id="link5" type="40kmh-2lanes"/>
-
-<connection from="nd5" to="nd6" fromLane="1" toLane="0"/>
-<connection from="nd5" to="nd6" fromLane="2" toLane="1"/>
 </edges>
