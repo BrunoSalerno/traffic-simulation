@@ -50,7 +50,7 @@ if __name__ == "__main__":
     seq = []
     seq.append('<routes>')
     seq.append('<vType id="{}" vClass="passenger"/>'.format(CAR))
-    seq.append('<vType id="{}" vClass="passenger" color="green"><carFollowing-IDM/></vType>'.format(ACC))
+    seq.append('<vType id="{}" vClass="passenger" carFollowModel="IDM" color="green"/>'.format(ACC))
     seq.append('<route id="r1" edges="link1 link2 link3 link4 link5"/>')
 
     all_vehicles = generateRandomVehicles(car_rate, total, "r1", CAR)
