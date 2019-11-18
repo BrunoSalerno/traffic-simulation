@@ -38,8 +38,9 @@ def writeToFile(strList, filename):
 if __name__ == "__main__":
     total = 3600
     veh = 3000
-    acc_proportion = 0.5
-   
+    acc_proportion = 0
+    filename = 'routes-0ACC'
+
     car_rate = veh * (1 - acc_proportion) / total
     acc_rate = veh * acc_proportion / total
    
@@ -53,7 +54,9 @@ if __name__ == "__main__":
     seq.append('<route id="r1" edges="link1 link2 link3 link4 link5"/>')
 
     all_vehicles = generateRandomVehicles(car_rate, total, "r1", CAR)
-    all_vehicles += generateRandomVehicles(acc_rate, total, "r1", ACC)
+
+    if acc_rate > 0:
+        all_vehicles += generateRandomVehicles(acc_rate, total, "r1", ACC)
 
     all_vehicles.sort(key = lambda i: i['depart'])
     for veh in all_vehicles:
@@ -65,4 +68,4 @@ if __name__ == "__main__":
 
     seq.append('</routes>')
 
-    writeToFile(seq, "routes.xml")
+    writeToFile(seq, "{}.xml".format(filename))

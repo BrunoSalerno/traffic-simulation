@@ -109,7 +109,7 @@ p1.set_xlabel("Speed - m/s")
 p1.set_ylabel("Frequency")
 
 df['mean_accel'].hist(ax=p2)
-p2.set_ylabel("Accel - m/s^2")
+p2.set_ylabel("Freq. accel - m/s^2")
 p2.set_xlabel("Simulation")
 
 df['cum_variance'].plot(ax=p3, use_index=True, label="cum. variance")
