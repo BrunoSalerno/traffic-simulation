@@ -1,0 +1,2859 @@
+/pdc/vol/sumo/1.2.0/lib/python2.7/site-packages/sumolib-1.2.0-py2.7.egg/sumolib/__init__.py:28: UserWarning: No module named matplotlib
+  warnings.warn(str(e))
+Info about the simulation:
+48 processors
+16 processes
+1000 total runs
+62 runs per process
+Output file: sims_16process_1000runs_1574079748.csv
+Loading configuration... Loading configuration... Loading configuration... Loading configuration... Loading configuration... Loading configuration... Loading configuration... Loading configuration... Loading configuration... Loading configuration... Loading configuration... Loading configuration... Loading configuration... Loading configuration... Loading configuration... done.
+done.
+done.
+done.
+done.
+done.
+done.
+done.
+done.
+done.
+done.
+done.
+done.
+done.
+done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+seed: 1574086792
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:59703 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:59703 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574102926
+ Retrying in 1 seconds
+seed: 1574090886
+ Retrying in 1 seconds
+seed: 1574111202
+ Retrying in 1 seconds
+seed: 1574104404
+ Retrying in 1 seconds
+seed: 1574173540
+ Retrying in 1 seconds
+seed: 1574133347
+ Retrying in 1 seconds
+seed: 1574156658
+ Retrying in 1 seconds
+seed: 1574087763
+ Retrying in 1 seconds
+seed: 1574119545
+ Retrying in 1 seconds
+seed: 1574150889
+ Retrying in 1 seconds
+seed: 1574080495
+ Retrying in 1 seconds
+seed: 1574086870
+ Retrying in 1 seconds
+seed: 1574097915
+ Retrying in 1 seconds
+seed: 1574080830
+ Retrying in 1 seconds
+seed: 1574166136
+ Retrying in 1 seconds
+seed: 1574158984
+ Retrying in 1 seconds
+seed: 1574147429
+ Retrying in 1 seconds
+seed: 1574138918
+ Retrying in 1 seconds
+seed: 1574102299
+ Retrying in 1 seconds
+seed: 1574147736
+ Retrying in 1 seconds
+seed: 1574127673
+ Retrying in 1 seconds
+seed: 1574130790
+ Retrying in 1 seconds
+seed: 1574154635
+ Retrying in 1 seconds
+seed: 1574145720
+ Retrying in 1 seconds
+seed: 1574086730
+ Retrying in 1 seconds
+seed: 1574166683
+ Retrying in 1 seconds
+seed: 1574148889
+ Retrying in 1 seconds
+seed: 1574139320
+ Retrying in 1 seconds
+seed: 1574137146
+ Retrying in 1 seconds
+seed: 1574147124
+ Retrying in 1 seconds
+seed: 1574125088
+ Retrying in 1 seconds
+seed: 1574156120
+ Retrying in 1 seconds
+seed: 1574107274
+ Retrying in 1 seconds
+seed: 1574129174
+ Retrying in 1 seconds
+seed: 1574137029
+ Retrying in 1 seconds
+seed: 1574092670
+ Retrying in 1 seconds
+seed: 1574119868
+ Retrying in 1 seconds
+seed: 1574157849
+ Retrying in 1 seconds
+seed: 1574135886
+ Retrying in 1 seconds
+seed: 1574135264
+ Retrying in 1 seconds
+seed: 1574115895
+ Retrying in 1 seconds
+seed: 1574106668
+ Retrying in 1 seconds
+seed: 1574165308
+ Retrying in 1 seconds
+seed: 1574107080
+ Retrying in 1 seconds
+seed: 1574126102
+ Retrying in 1 seconds
+seed: 1574165452
+ Retrying in 1 seconds
+seed: 1574137335
+ Retrying in 1 seconds
+seed: 1574095871
+ Retrying in 1 seconds
+seed: 1574115068
+ Retrying in 1 seconds
+seed: 1574088149
+ Retrying in 1 seconds
+seed: 1574127471
+ Retrying in 1 seconds
+seed: 1574101036
+ Retrying in 1 seconds
+seed: 1574124834
+ Retrying in 1 seconds
+seed: 1574174900
+ Retrying in 1 seconds
+seed: 1574173727
+ Retrying in 1 seconds
+seed: 1574122595
+ Retrying in 1 seconds
+seed: 1574161480
+ Retrying in 1 seconds
+seed: 1574146764
+ Retrying in 1 seconds
+seed: 1574085685
+ Retrying in 1 seconds
+seed: 1574094980
+ Retrying in 1 seconds
+seed: 1574113957
+ Retrying in 1 seconds
+seed: 1574178972
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:57532 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:57532 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574090178
+ Retrying in 1 seconds
+seed: 1574100786
+ Retrying in 1 seconds
+seed: 1574172285
+ Retrying in 1 seconds
+seed: 1574080350
+ Retrying in 1 seconds
+seed: 1574159300
+ Retrying in 1 seconds
+seed: 1574104223
+ Retrying in 1 seconds
+seed: 1574156019
+ Retrying in 1 seconds
+seed: 1574162146
+ Retrying in 1 seconds
+seed: 1574143113
+ Retrying in 1 seconds
+seed: 1574153586
+ Retrying in 1 seconds
+seed: 1574091187
+ Retrying in 1 seconds
+seed: 1574135905
+ Retrying in 1 seconds
+seed: 1574113532
+ Retrying in 1 seconds
+seed: 1574165404
+ Retrying in 1 seconds
+seed: 1574142859
+ Retrying in 1 seconds
+seed: 1574141666
+ Retrying in 1 seconds
+seed: 1574122345
+ Retrying in 1 seconds
+seed: 1574146375
+ Retrying in 1 seconds
+seed: 1574154847
+ Retrying in 1 seconds
+seed: 1574144990
+ Retrying in 1 seconds
+seed: 1574145655
+ Retrying in 1 seconds
+seed: 1574152813
+ Retrying in 1 seconds
+seed: 1574176619
+ Retrying in 1 seconds
+seed: 1574104819
+ Retrying in 1 seconds
+seed: 1574152885
+ Retrying in 1 seconds
+seed: 1574108425
+ Retrying in 1 seconds
+seed: 1574127366
+ Retrying in 1 seconds
+seed: 1574119759
+ Retrying in 1 seconds
+seed: 1574120560
+ Retrying in 1 seconds
+seed: 1574082007
+ Retrying in 1 seconds
+seed: 1574118629
+ Retrying in 1 seconds
+seed: 1574123467
+ Retrying in 1 seconds
+seed: 1574111014
+ Retrying in 1 seconds
+seed: 1574161795
+ Retrying in 1 seconds
+seed: 1574148149
+ Retrying in 1 seconds
+seed: 1574116163
+ Retrying in 1 seconds
+seed: 1574111403
+ Retrying in 1 seconds
+seed: 1574152282
+ Retrying in 1 seconds
+seed: 1574097664
+ Retrying in 1 seconds
+seed: 1574151540
+ Retrying in 1 seconds
+seed: 1574131795
+ Retrying in 1 seconds
+seed: 1574103292
+ Retrying in 1 seconds
+seed: 1574099004
+ Retrying in 1 seconds
+seed: 1574114259
+ Retrying in 1 seconds
+seed: 1574094584
+ Retrying in 1 seconds
+seed: 1574171507
+ Retrying in 1 seconds
+seed: 1574091290
+ Retrying in 1 seconds
+seed: 1574128730
+ Retrying in 1 seconds
+seed: 1574112491
+ Retrying in 1 seconds
+seed: 1574139433
+ Retrying in 1 seconds
+seed: 1574141758
+ Retrying in 1 seconds
+seed: 1574125828
+ Retrying in 1 seconds
+seed: 1574167596
+ Retrying in 1 seconds
+seed: 1574102296
+ Retrying in 1 seconds
+seed: 1574136551
+ Retrying in 1 seconds
+seed: 1574128146
+ Retrying in 1 seconds
+seed: 1574083293
+ Retrying in 1 seconds
+seed: 1574137240
+ Retrying in 1 seconds
+seed: 1574106369
+ Retrying in 1 seconds
+seed: 1574098223
+ Retrying in 1 seconds
+seed: 1574115212
+ Retrying in 1 seconds
+Loading configuration... done.
+Loading configuration... done.
+Loading configuration... done.
+seed: 1574109751
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:34246 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:34246 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574081347
+ Retrying in 1 seconds
+seed: 1574136631
+ Retrying in 1 seconds
+seed: 1574102160
+ Retrying in 1 seconds
+seed: 1574145410
+ Retrying in 1 seconds
+seed: 1574166524
+ Retrying in 1 seconds
+seed: 1574149818
+ Retrying in 1 seconds
+seed: 1574101972
+ Retrying in 1 seconds
+seed: 1574118355
+ Retrying in 1 seconds
+seed: 1574140475
+ Retrying in 1 seconds
+seed: 1574148659
+ Retrying in 1 seconds
+seed: 1574177922
+ Retrying in 1 seconds
+seed: 1574176056
+ Retrying in 1 seconds
+seed: 1574175161
+ Retrying in 1 seconds
+seed: 1574149360
+ Retrying in 1 seconds
+seed: 1574125847
+ Retrying in 1 seconds
+seed: 1574081412
+ Retrying in 1 seconds
+seed: 1574177917
+ Retrying in 1 seconds
+seed: 1574108521
+ Retrying in 1 seconds
+seed: 1574104610
+ Retrying in 1 seconds
+seed: 1574139500
+ Retrying in 1 seconds
+seed: 1574131192
+ Retrying in 1 seconds
+seed: 1574128963
+ Retrying in 1 seconds
+seed: 1574105231
+ Retrying in 1 seconds
+seed: 1574111760
+ Retrying in 1 seconds
+seed: 1574176605
+ Retrying in 1 seconds
+seed: 1574130405
+ Retrying in 1 seconds
+seed: 1574149380
+ Retrying in 1 seconds
+seed: 1574138663
+ Retrying in 1 seconds
+seed: 1574082609
+ Retrying in 1 seconds
+seed: 1574106400
+ Retrying in 1 seconds
+seed: 1574102726
+ Retrying in 1 seconds
+seed: 1574135719
+ Retrying in 1 seconds
+seed: 1574090666
+ Retrying in 1 seconds
+seed: 1574149195
+ Retrying in 1 seconds
+seed: 1574093587
+ Retrying in 1 seconds
+seed: 1574175931
+ Retrying in 1 seconds
+seed: 1574087280
+ Retrying in 1 seconds
+seed: 1574085839
+ Retrying in 1 seconds
+seed: 1574156982
+ Retrying in 1 seconds
+seed: 1574181497
+ Retrying in 1 seconds
+seed: 1574137895
+ Retrying in 1 seconds
+seed: 1574119763
+ Retrying in 1 seconds
+seed: 1574144183
+ Retrying in 1 seconds
+seed: 1574094723
+ Retrying in 1 seconds
+seed: 1574133775
+ Retrying in 1 seconds
+seed: 1574179671
+ Retrying in 1 seconds
+seed: 1574114939
+ Retrying in 1 seconds
+seed: 1574155365
+ Retrying in 1 seconds
+seed: 1574136289
+ Retrying in 1 seconds
+seed: 1574179074
+ Retrying in 1 seconds
+seed: 1574084608
+ Retrying in 1 seconds
+seed: 1574138717
+ Retrying in 1 seconds
+seed: 1574176951
+ Retrying in 1 seconds
+seed: 1574168483
+ Retrying in 1 seconds
+seed: 1574123176
+ Retrying in 1 seconds
+seed: 1574090750
+ Retrying in 1 seconds
+seed: 1574090836
+ Retrying in 1 seconds
+seed: 1574083484
+ Retrying in 1 seconds
+seed: 1574116407
+ Retrying in 1 seconds
+seed: 1574092133
+ Retrying in 1 seconds
+seed: 1574124433
+ Retrying in 1 seconds
+Loading configuration... done.
+seed: 1574158309
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:59396 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:59396 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574177148
+ Retrying in 1 seconds
+seed: 1574161765
+ Retrying in 1 seconds
+seed: 1574100709
+ Retrying in 1 seconds
+seed: 1574101388
+ Retrying in 1 seconds
+seed: 1574151091
+ Retrying in 1 seconds
+seed: 1574122850
+ Retrying in 1 seconds
+seed: 1574112979
+ Retrying in 1 seconds
+seed: 1574102478
+ Retrying in 1 seconds
+seed: 1574113892
+ Retrying in 1 seconds
+seed: 1574104649
+ Retrying in 1 seconds
+seed: 1574119454
+ Retrying in 1 seconds
+seed: 1574112198
+ Retrying in 1 seconds
+seed: 1574128246
+ Retrying in 1 seconds
+seed: 1574161493
+ Retrying in 1 seconds
+seed: 1574162939
+ Retrying in 1 seconds
+seed: 1574127634
+ Retrying in 1 seconds
+seed: 1574175684
+ Retrying in 1 seconds
+seed: 1574122920
+ Retrying in 1 seconds
+seed: 1574099485
+ Retrying in 1 seconds
+seed: 1574082916
+ Retrying in 1 seconds
+seed: 1574145155
+ Retrying in 1 seconds
+seed: 1574170089
+ Retrying in 1 seconds
+seed: 1574177217
+ Retrying in 1 seconds
+seed: 1574135220
+ Retrying in 1 seconds
+seed: 1574100193
+ Retrying in 1 seconds
+seed: 1574133495
+ Retrying in 1 seconds
+seed: 1574154089
+ Retrying in 1 seconds
+seed: 1574130443
+ Retrying in 1 seconds
+seed: 1574175087
+ Retrying in 1 seconds
+seed: 1574100872
+ Retrying in 1 seconds
+seed: 1574163750
+ Retrying in 1 seconds
+seed: 1574121021
+ Retrying in 1 seconds
+seed: 1574166743
+ Retrying in 1 seconds
+seed: 1574092179
+ Retrying in 1 seconds
+seed: 1574085533
+ Retrying in 1 seconds
+seed: 1574111139
+ Retrying in 1 seconds
+seed: 1574123350
+ Retrying in 1 seconds
+seed: 1574181147
+ Retrying in 1 seconds
+seed: 1574098597
+ Retrying in 1 seconds
+seed: 1574090179
+ Retrying in 1 seconds
+seed: 1574124029
+ Retrying in 1 seconds
+seed: 1574082130
+ Retrying in 1 seconds
+seed: 1574140344
+ Retrying in 1 seconds
+seed: 1574094872
+ Retrying in 1 seconds
+seed: 1574108704
+ Retrying in 1 seconds
+seed: 1574108776
+ Retrying in 1 seconds
+seed: 1574177419
+ Retrying in 1 seconds
+seed: 1574109829
+ Retrying in 1 seconds
+seed: 1574129660
+ Retrying in 1 seconds
+seed: 1574157535
+ Retrying in 1 seconds
+seed: 1574123755
+ Retrying in 1 seconds
+seed: 1574101020
+ Retrying in 1 seconds
+seed: 1574104089
+ Retrying in 1 seconds
+seed: 1574105133
+ Retrying in 1 seconds
+seed: 1574153146
+ Retrying in 1 seconds
+seed: 1574137266
+ Retrying in 1 seconds
+seed: 1574123351
+ Retrying in 1 seconds
+seed: 1574101436
+ Retrying in 1 seconds
+seed: 1574112057
+ Retrying in 1 seconds
+seed: 1574131449
+ Retrying in 1 seconds
+seed: 1574148501
+ Retrying in 1 seconds
+seed: 1574097723
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:47055 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:47055 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574146942
+ Retrying in 1 seconds
+seed: 1574178108
+ Retrying in 1 seconds
+seed: 1574167647
+ Retrying in 1 seconds
+seed: 1574155714
+ Retrying in 1 seconds
+seed: 1574130072
+ Retrying in 1 seconds
+seed: 1574086655
+ Retrying in 1 seconds
+seed: 1574128205
+ Retrying in 1 seconds
+seed: 1574106306
+ Retrying in 1 seconds
+seed: 1574134495
+ Retrying in 1 seconds
+seed: 1574110232
+ Retrying in 1 seconds
+seed: 1574104990
+ Retrying in 1 seconds
+seed: 1574140905
+ Retrying in 1 seconds
+seed: 1574098245
+ Retrying in 1 seconds
+seed: 1574118279
+ Retrying in 1 seconds
+seed: 1574127251
+ Retrying in 1 seconds
+seed: 1574171178
+ Retrying in 1 seconds
+seed: 1574095845
+ Retrying in 1 seconds
+seed: 1574168830
+ Retrying in 1 seconds
+seed: 1574156147
+ Retrying in 1 seconds
+seed: 1574085030
+ Retrying in 1 seconds
+seed: 1574091654
+ Retrying in 1 seconds
+seed: 1574144930
+ Retrying in 1 seconds
+seed: 1574178333
+ Retrying in 1 seconds
+seed: 1574111899
+ Retrying in 1 seconds
+seed: 1574138544
+ Retrying in 1 seconds
+seed: 1574172470
+ Retrying in 1 seconds
+seed: 1574126390
+ Retrying in 1 seconds
+seed: 1574087789
+ Retrying in 1 seconds
+seed: 1574106410
+ Retrying in 1 seconds
+seed: 1574121981
+ Retrying in 1 seconds
+seed: 1574131968
+ Retrying in 1 seconds
+seed: 1574135382
+ Retrying in 1 seconds
+seed: 1574098525
+ Retrying in 1 seconds
+seed: 1574139933
+ Retrying in 1 seconds
+seed: 1574141005
+ Retrying in 1 seconds
+seed: 1574135438
+ Retrying in 1 seconds
+seed: 1574108287
+ Retrying in 1 seconds
+seed: 1574081950
+ Retrying in 1 seconds
+seed: 1574085519
+ Retrying in 1 seconds
+seed: 1574159532
+ Retrying in 1 seconds
+seed: 1574166228
+ Retrying in 1 seconds
+seed: 1574140855
+ Retrying in 1 seconds
+seed: 1574171688
+ Retrying in 1 seconds
+seed: 1574179290
+ Retrying in 1 seconds
+seed: 1574175648
+ Retrying in 1 seconds
+seed: 1574138502
+ Retrying in 1 seconds
+seed: 1574169369
+ Retrying in 1 seconds
+seed: 1574086945
+ Retrying in 1 seconds
+seed: 1574123452
+ Retrying in 1 seconds
+seed: 1574115569
+ Retrying in 1 seconds
+seed: 1574141859
+ Retrying in 1 seconds
+seed: 1574095196
+ Retrying in 1 seconds
+seed: 1574133635
+ Retrying in 1 seconds
+seed: 1574115811
+ Retrying in 1 seconds
+seed: 1574122365
+ Retrying in 1 seconds
+seed: 1574128297
+ Retrying in 1 seconds
+seed: 1574107901
+ Retrying in 1 seconds
+seed: 1574134544
+ Retrying in 1 seconds
+seed: 1574128637
+ Retrying in 1 seconds
+seed: 1574164576
+ Retrying in 1 seconds
+seed: 1574130503
+ Retrying in 1 seconds
+Loading configuration... done.
+seed: 1574105353
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:41911 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:41911 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574096647
+ Retrying in 1 seconds
+seed: 1574169912
+ Retrying in 1 seconds
+seed: 1574121192
+ Retrying in 1 seconds
+seed: 1574156983
+ Retrying in 1 seconds
+seed: 1574142327
+ Retrying in 1 seconds
+seed: 1574107461
+ Retrying in 1 seconds
+seed: 1574145610
+ Retrying in 1 seconds
+seed: 1574145476
+ Retrying in 1 seconds
+seed: 1574167710
+ Retrying in 1 seconds
+seed: 1574173024
+ Retrying in 1 seconds
+seed: 1574102600
+ Retrying in 1 seconds
+seed: 1574118828
+ Retrying in 1 seconds
+seed: 1574094808
+ Retrying in 1 seconds
+seed: 1574135477
+ Retrying in 1 seconds
+seed: 1574164520
+ Retrying in 1 seconds
+seed: 1574140356
+ Retrying in 1 seconds
+seed: 1574174977
+ Retrying in 1 seconds
+seed: 1574133356
+ Retrying in 1 seconds
+seed: 1574132683
+ Retrying in 1 seconds
+seed: 1574105398
+ Retrying in 1 seconds
+seed: 1574141837
+ Retrying in 1 seconds
+seed: 1574174775
+ Retrying in 1 seconds
+seed: 1574178399
+ Retrying in 1 seconds
+seed: 1574101153
+ Retrying in 1 seconds
+seed: 1574081805
+ Retrying in 1 seconds
+seed: 1574137709
+ Retrying in 1 seconds
+seed: 1574177937
+ Retrying in 1 seconds
+seed: 1574178715
+ Retrying in 1 seconds
+seed: 1574142514
+ Retrying in 1 seconds
+seed: 1574133831
+ Retrying in 1 seconds
+seed: 1574118447
+ Retrying in 1 seconds
+seed: 1574173176
+ Retrying in 1 seconds
+seed: 1574082354
+ Retrying in 1 seconds
+seed: 1574121155
+ Retrying in 1 seconds
+seed: 1574082518
+ Retrying in 1 seconds
+seed: 1574157822
+ Retrying in 1 seconds
+seed: 1574124024
+ Retrying in 1 seconds
+seed: 1574109364
+ Retrying in 1 seconds
+seed: 1574139759
+ Retrying in 1 seconds
+seed: 1574120665
+ Retrying in 1 seconds
+seed: 1574175529
+ Retrying in 1 seconds
+seed: 1574161173
+ Retrying in 1 seconds
+seed: 1574177579
+ Retrying in 1 seconds
+seed: 1574082727
+ Retrying in 1 seconds
+seed: 1574162430
+ Retrying in 1 seconds
+seed: 1574144462
+ Retrying in 1 seconds
+seed: 1574131748
+ Retrying in 1 seconds
+seed: 1574145518
+ Retrying in 1 seconds
+seed: 1574164516
+ Retrying in 1 seconds
+seed: 1574129525
+ Retrying in 1 seconds
+seed: 1574162427
+ Retrying in 1 seconds
+seed: 1574180134
+ Retrying in 1 seconds
+seed: 1574089082
+ Retrying in 1 seconds
+seed: 1574168285
+ Retrying in 1 seconds
+seed: 1574134825
+ Retrying in 1 seconds
+seed: 1574130531
+ Retrying in 1 seconds
+seed: 1574083532
+ Retrying in 1 seconds
+seed: 1574129647
+ Retrying in 1 seconds
+seed: 1574155672
+ Retrying in 1 seconds
+seed: 1574164406
+ Retrying in 1 seconds
+seed: 1574160325
+ Retrying in 1 seconds
+seed: 1574086684
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:49340 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:49340 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574163932
+ Retrying in 1 seconds
+seed: 1574159224
+ Retrying in 1 seconds
+seed: 1574104941
+ Retrying in 1 seconds
+seed: 1574114009
+ Retrying in 1 seconds
+seed: 1574129765
+ Retrying in 1 seconds
+seed: 1574180001
+ Retrying in 1 seconds
+seed: 1574117513
+ Retrying in 1 seconds
+seed: 1574087908
+ Retrying in 1 seconds
+seed: 1574121917
+ Retrying in 1 seconds
+seed: 1574082957
+ Retrying in 1 seconds
+seed: 1574099835
+ Retrying in 1 seconds
+seed: 1574143195
+ Retrying in 1 seconds
+seed: 1574116524
+ Retrying in 1 seconds
+seed: 1574154711
+ Retrying in 1 seconds
+seed: 1574117172
+ Retrying in 1 seconds
+seed: 1574117119
+ Retrying in 1 seconds
+seed: 1574125397
+ Retrying in 1 seconds
+seed: 1574082529
+ Retrying in 1 seconds
+seed: 1574175977
+ Retrying in 1 seconds
+seed: 1574121223
+ Retrying in 1 seconds
+seed: 1574120509
+ Retrying in 1 seconds
+seed: 1574089342
+ Retrying in 1 seconds
+seed: 1574102472
+ Retrying in 1 seconds
+seed: 1574130823
+ Retrying in 1 seconds
+seed: 1574082508
+ Retrying in 1 seconds
+seed: 1574158008
+ Retrying in 1 seconds
+seed: 1574172583
+ Retrying in 1 seconds
+seed: 1574147697
+ Retrying in 1 seconds
+seed: 1574111138
+ Retrying in 1 seconds
+seed: 1574108161
+ Retrying in 1 seconds
+seed: 1574135414
+ Retrying in 1 seconds
+seed: 1574117947
+ Retrying in 1 seconds
+seed: 1574124596
+ Retrying in 1 seconds
+seed: 1574165147
+ Retrying in 1 seconds
+seed: 1574084984
+ Retrying in 1 seconds
+seed: 1574154284
+ Retrying in 1 seconds
+seed: 1574158211
+ Retrying in 1 seconds
+seed: 1574173780
+ Retrying in 1 seconds
+seed: 1574155581
+ Retrying in 1 seconds
+seed: 1574083195
+ Retrying in 1 seconds
+seed: 1574099077
+ Retrying in 1 seconds
+seed: 1574181799
+ Retrying in 1 seconds
+seed: 1574162641
+ Retrying in 1 seconds
+seed: 1574157708
+ Retrying in 1 seconds
+seed: 1574083870
+ Retrying in 1 seconds
+seed: 1574182130
+ Retrying in 1 seconds
+seed: 1574126459
+ Retrying in 1 seconds
+seed: 1574114250
+ Retrying in 1 seconds
+seed: 1574126695
+ Retrying in 1 seconds
+seed: 1574116265
+ Retrying in 1 seconds
+seed: 1574116380
+ Retrying in 1 seconds
+seed: 1574173938
+ Retrying in 1 seconds
+seed: 1574121096
+ Retrying in 1 seconds
+seed: 1574120658
+ Retrying in 1 seconds
+seed: 1574139484
+ Retrying in 1 seconds
+seed: 1574178905
+ Retrying in 1 seconds
+seed: 1574095010
+ Retrying in 1 seconds
+seed: 1574171639
+ Retrying in 1 seconds
+seed: 1574171975
+ Retrying in 1 seconds
+seed: 1574159165
+ Retrying in 1 seconds
+seed: 1574095694
+ Retrying in 1 seconds
+seed: 1574160695
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:58944 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:58944 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574159142
+ Retrying in 1 seconds
+seed: 1574093789
+ Retrying in 1 seconds
+seed: 1574113361
+ Retrying in 1 seconds
+seed: 1574096766
+ Retrying in 1 seconds
+seed: 1574153567
+ Retrying in 1 seconds
+seed: 1574082643
+ Retrying in 1 seconds
+seed: 1574130400
+ Retrying in 1 seconds
+seed: 1574136449
+ Retrying in 1 seconds
+seed: 1574097069
+ Retrying in 1 seconds
+seed: 1574115042
+ Retrying in 1 seconds
+seed: 1574150326
+ Retrying in 1 seconds
+seed: 1574099251
+ Retrying in 1 seconds
+seed: 1574081866
+ Retrying in 1 seconds
+seed: 1574166295
+ Retrying in 1 seconds
+seed: 1574169276
+ Retrying in 1 seconds
+seed: 1574085028
+ Retrying in 1 seconds
+seed: 1574113678
+ Retrying in 1 seconds
+seed: 1574146645
+ Retrying in 1 seconds
+seed: 1574106604
+ Retrying in 1 seconds
+seed: 1574102776
+ Retrying in 1 seconds
+seed: 1574128205
+ Retrying in 1 seconds
+seed: 1574151065
+ Retrying in 1 seconds
+seed: 1574162257
+ Retrying in 1 seconds
+seed: 1574137130
+ Retrying in 1 seconds
+seed: 1574148339
+ Retrying in 1 seconds
+seed: 1574107852
+ Retrying in 1 seconds
+seed: 1574137000
+ Retrying in 1 seconds
+seed: 1574141337
+ Retrying in 1 seconds
+seed: 1574154245
+ Retrying in 1 seconds
+seed: 1574175204
+ Retrying in 1 seconds
+seed: 1574176975
+ Retrying in 1 seconds
+seed: 1574104893
+ Retrying in 1 seconds
+seed: 1574168805
+ Retrying in 1 seconds
+seed: 1574102728
+ Retrying in 1 seconds
+seed: 1574169022
+ Retrying in 1 seconds
+seed: 1574098621
+ Retrying in 1 seconds
+seed: 1574154470
+ Retrying in 1 seconds
+seed: 1574121582
+ Retrying in 1 seconds
+seed: 1574088258
+ Retrying in 1 seconds
+seed: 1574162053
+ Retrying in 1 seconds
+seed: 1574150719
+ Retrying in 1 seconds
+seed: 1574112839
+ Retrying in 1 seconds
+seed: 1574122099
+ Retrying in 1 seconds
+seed: 1574181432
+ Retrying in 1 seconds
+seed: 1574172359
+ Retrying in 1 seconds
+seed: 1574144443
+ Retrying in 1 seconds
+seed: 1574131301
+ Retrying in 1 seconds
+seed: 1574086408
+ Retrying in 1 seconds
+seed: 1574121834
+ Retrying in 1 seconds
+seed: 1574108801
+ Retrying in 1 seconds
+seed: 1574104032
+ Retrying in 1 seconds
+seed: 1574092101
+ Retrying in 1 seconds
+seed: 1574091062
+ Retrying in 1 seconds
+seed: 1574169576
+ Retrying in 1 seconds
+seed: 1574105425
+ Retrying in 1 seconds
+seed: 1574159885
+ Retrying in 1 seconds
+seed: 1574135701
+ Retrying in 1 seconds
+seed: 1574107836
+ Retrying in 1 seconds
+seed: 1574160071
+ Retrying in 1 seconds
+seed: 1574124895
+ Retrying in 1 seconds
+seed: 1574083773
+ Retrying in 1 seconds
+seed: 1574112668
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:49034 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:49034 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574167298
+ Retrying in 1 seconds
+seed: 1574106534
+ Retrying in 1 seconds
+seed: 1574154952
+ Retrying in 1 seconds
+seed: 1574125009
+ Retrying in 1 seconds
+seed: 1574159284
+ Retrying in 1 seconds
+seed: 1574147942
+ Retrying in 1 seconds
+seed: 1574087535
+ Retrying in 1 seconds
+seed: 1574159560
+ Retrying in 1 seconds
+seed: 1574101251
+ Retrying in 1 seconds
+seed: 1574121810
+ Retrying in 1 seconds
+seed: 1574176214
+ Retrying in 1 seconds
+seed: 1574085829
+ Retrying in 1 seconds
+seed: 1574120508
+ Retrying in 1 seconds
+seed: 1574106281
+ Retrying in 1 seconds
+seed: 1574104903
+ Retrying in 1 seconds
+seed: 1574164349
+ Retrying in 1 seconds
+seed: 1574103318
+ Retrying in 1 seconds
+seed: 1574133010
+ Retrying in 1 seconds
+seed: 1574155874
+ Retrying in 1 seconds
+seed: 1574116445
+ Retrying in 1 seconds
+seed: 1574088892
+ Retrying in 1 seconds
+seed: 1574168661
+ Retrying in 1 seconds
+seed: 1574140072
+ Retrying in 1 seconds
+seed: 1574142433
+ Retrying in 1 seconds
+seed: 1574108750
+ Retrying in 1 seconds
+seed: 1574111223
+ Retrying in 1 seconds
+seed: 1574090501
+ Retrying in 1 seconds
+seed: 1574109781
+ Retrying in 1 seconds
+seed: 1574164301
+ Retrying in 1 seconds
+seed: 1574111550
+ Retrying in 1 seconds
+seed: 1574119738
+ Retrying in 1 seconds
+seed: 1574084847
+ Retrying in 1 seconds
+seed: 1574089351
+ Retrying in 1 seconds
+seed: 1574162212
+ Retrying in 1 seconds
+seed: 1574122248
+ Retrying in 1 seconds
+seed: 1574109359
+ Retrying in 1 seconds
+seed: 1574163365
+ Retrying in 1 seconds
+seed: 1574130960
+ Retrying in 1 seconds
+seed: 1574097978
+ Retrying in 1 seconds
+seed: 1574148423
+ Retrying in 1 seconds
+seed: 1574160420
+ Retrying in 1 seconds
+seed: 1574163441
+ Retrying in 1 seconds
+seed: 1574082292
+ Retrying in 1 seconds
+seed: 1574126758
+ Retrying in 1 seconds
+seed: 1574106254
+ Retrying in 1 seconds
+seed: 1574167308
+ Retrying in 1 seconds
+seed: 1574119713
+ Retrying in 1 seconds
+seed: 1574164879
+ Retrying in 1 seconds
+seed: 1574100643
+ Retrying in 1 seconds
+seed: 1574109021
+ Retrying in 1 seconds
+seed: 1574129316
+ Retrying in 1 seconds
+seed: 1574139009
+ Retrying in 1 seconds
+seed: 1574092450
+ Retrying in 1 seconds
+seed: 1574093748
+ Retrying in 1 seconds
+seed: 1574116878
+ Retrying in 1 seconds
+seed: 1574169300
+ Retrying in 1 seconds
+seed: 1574158114
+ Retrying in 1 seconds
+seed: 1574124201
+ Retrying in 1 seconds
+seed: 1574105781
+ Retrying in 1 seconds
+seed: 1574122471
+ Retrying in 1 seconds
+seed: 1574172790
+ Retrying in 1 seconds
+seed: 1574080233
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:40872 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:40872 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574158450
+ Retrying in 1 seconds
+seed: 1574120443
+ Retrying in 1 seconds
+seed: 1574094668
+ Retrying in 1 seconds
+seed: 1574113516
+ Retrying in 1 seconds
+seed: 1574088997
+ Retrying in 1 seconds
+seed: 1574126494
+ Retrying in 1 seconds
+seed: 1574127652
+ Retrying in 1 seconds
+seed: 1574082128
+ Retrying in 1 seconds
+seed: 1574091791
+ Retrying in 1 seconds
+seed: 1574121910
+ Retrying in 1 seconds
+seed: 1574109095
+ Retrying in 1 seconds
+seed: 1574122577
+ Retrying in 1 seconds
+seed: 1574115780
+ Retrying in 1 seconds
+seed: 1574109965
+ Retrying in 1 seconds
+seed: 1574175825
+ Retrying in 1 seconds
+seed: 1574118138
+ Retrying in 1 seconds
+seed: 1574112274
+ Retrying in 1 seconds
+seed: 1574143625
+ Retrying in 1 seconds
+seed: 1574147834
+ Retrying in 1 seconds
+seed: 1574137211
+ Retrying in 1 seconds
+seed: 1574162532
+ Retrying in 1 seconds
+seed: 1574178579
+ Retrying in 1 seconds
+seed: 1574130543
+ Retrying in 1 seconds
+seed: 1574174123
+ Retrying in 1 seconds
+seed: 1574134666
+ Retrying in 1 seconds
+seed: 1574149030
+ Retrying in 1 seconds
+seed: 1574105924
+ Retrying in 1 seconds
+seed: 1574122831
+ Retrying in 1 seconds
+seed: 1574088097
+ Retrying in 1 seconds
+seed: 1574168580
+ Retrying in 1 seconds
+seed: 1574161163
+ Retrying in 1 seconds
+seed: 1574093131
+ Retrying in 1 seconds
+seed: 1574173230
+ Retrying in 1 seconds
+seed: 1574125628
+ Retrying in 1 seconds
+seed: 1574088238
+ Retrying in 1 seconds
+seed: 1574121537
+ Retrying in 1 seconds
+seed: 1574165714
+ Retrying in 1 seconds
+seed: 1574091507
+ Retrying in 1 seconds
+seed: 1574088338
+ Retrying in 1 seconds
+seed: 1574181489
+ Retrying in 1 seconds
+seed: 1574176322
+ Retrying in 1 seconds
+seed: 1574144299
+ Retrying in 1 seconds
+seed: 1574121352
+ Retrying in 1 seconds
+seed: 1574148757
+ Retrying in 1 seconds
+seed: 1574148968
+ Retrying in 1 seconds
+seed: 1574114868
+ Retrying in 1 seconds
+seed: 1574166030
+ Retrying in 1 seconds
+seed: 1574131836
+ Retrying in 1 seconds
+seed: 1574127179
+ Retrying in 1 seconds
+seed: 1574125305
+ Retrying in 1 seconds
+seed: 1574092017
+ Retrying in 1 seconds
+seed: 1574128004
+ Retrying in 1 seconds
+seed: 1574158239
+ Retrying in 1 seconds
+seed: 1574085710
+ Retrying in 1 seconds
+seed: 1574093169
+ Retrying in 1 seconds
+seed: 1574116183
+ Retrying in 1 seconds
+seed: 1574169603
+ Retrying in 1 seconds
+seed: 1574132586
+ Retrying in 1 seconds
+seed: 1574146325
+ Retrying in 1 seconds
+seed: 1574173113
+ Retrying in 1 seconds
+seed: 1574123973
+ Retrying in 1 seconds
+seed: 1574084264
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:40145 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:40145 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574103733
+ Retrying in 1 seconds
+seed: 1574151141
+ Retrying in 1 seconds
+seed: 1574137028
+ Retrying in 1 seconds
+seed: 1574088386
+ Retrying in 1 seconds
+seed: 1574094482
+ Retrying in 1 seconds
+seed: 1574110365
+ Retrying in 1 seconds
+seed: 1574135545
+ Retrying in 1 seconds
+seed: 1574087869
+ Retrying in 1 seconds
+seed: 1574135311
+ Retrying in 1 seconds
+seed: 1574122525
+ Retrying in 1 seconds
+seed: 1574180264
+ Retrying in 1 seconds
+seed: 1574103138
+ Retrying in 1 seconds
+seed: 1574126249
+ Retrying in 1 seconds
+seed: 1574121697
+ Retrying in 1 seconds
+seed: 1574144335
+ Retrying in 1 seconds
+seed: 1574176727
+ Retrying in 1 seconds
+seed: 1574111863
+ Retrying in 1 seconds
+seed: 1574165300
+ Retrying in 1 seconds
+seed: 1574157421
+ Retrying in 1 seconds
+seed: 1574092891
+ Retrying in 1 seconds
+seed: 1574126703
+ Retrying in 1 seconds
+seed: 1574111892
+ Retrying in 1 seconds
+seed: 1574107312
+ Retrying in 1 seconds
+seed: 1574143784
+ Retrying in 1 seconds
+seed: 1574089029
+ Retrying in 1 seconds
+seed: 1574158447
+ Retrying in 1 seconds
+seed: 1574103923
+ Retrying in 1 seconds
+seed: 1574100451
+ Retrying in 1 seconds
+seed: 1574141364
+ Retrying in 1 seconds
+seed: 1574126464
+ Retrying in 1 seconds
+seed: 1574090350
+ Retrying in 1 seconds
+seed: 1574114957
+ Retrying in 1 seconds
+seed: 1574099033
+ Retrying in 1 seconds
+seed: 1574171246
+ Retrying in 1 seconds
+seed: 1574092510
+ Retrying in 1 seconds
+seed: 1574112965
+ Retrying in 1 seconds
+seed: 1574108340
+ Retrying in 1 seconds
+seed: 1574156436
+ Retrying in 1 seconds
+seed: 1574141194
+ Retrying in 1 seconds
+seed: 1574095963
+ Retrying in 1 seconds
+seed: 1574110342
+ Retrying in 1 seconds
+seed: 1574090373
+ Retrying in 1 seconds
+seed: 1574096354
+ Retrying in 1 seconds
+seed: 1574139090
+ Retrying in 1 seconds
+seed: 1574120750
+ Retrying in 1 seconds
+seed: 1574174097
+ Retrying in 1 seconds
+seed: 1574148172
+ Retrying in 1 seconds
+seed: 1574089254
+ Retrying in 1 seconds
+seed: 1574160867
+ Retrying in 1 seconds
+seed: 1574128747
+ Retrying in 1 seconds
+seed: 1574094692
+ Retrying in 1 seconds
+seed: 1574142528
+ Retrying in 1 seconds
+seed: 1574089913
+ Retrying in 1 seconds
+seed: 1574084507
+ Retrying in 1 seconds
+seed: 1574092485
+ Retrying in 1 seconds
+seed: 1574143056
+ Retrying in 1 seconds
+seed: 1574152059
+ Retrying in 1 seconds
+seed: 1574174093
+ Retrying in 1 seconds
+seed: 1574106362
+ Retrying in 1 seconds
+seed: 1574112089
+ Retrying in 1 seconds
+seed: 1574156105
+ Retrying in 1 seconds
+seed: 1574086102
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:34156 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:34156 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574151214
+ Retrying in 1 seconds
+seed: 1574112610
+ Retrying in 1 seconds
+seed: 1574103459
+ Retrying in 1 seconds
+seed: 1574120822
+ Retrying in 1 seconds
+seed: 1574115758
+ Retrying in 1 seconds
+seed: 1574176398
+ Retrying in 1 seconds
+seed: 1574121222
+ Retrying in 1 seconds
+seed: 1574117565
+ Retrying in 1 seconds
+seed: 1574135251
+ Retrying in 1 seconds
+seed: 1574115254
+ Retrying in 1 seconds
+seed: 1574161532
+ Retrying in 1 seconds
+seed: 1574119523
+ Retrying in 1 seconds
+seed: 1574127124
+ Retrying in 1 seconds
+seed: 1574086485
+ Retrying in 1 seconds
+seed: 1574135969
+ Retrying in 1 seconds
+seed: 1574140425
+ Retrying in 1 seconds
+seed: 1574157891
+ Retrying in 1 seconds
+seed: 1574148117
+ Retrying in 1 seconds
+seed: 1574114564
+ Retrying in 1 seconds
+seed: 1574082725
+ Retrying in 1 seconds
+seed: 1574160147
+ Retrying in 1 seconds
+seed: 1574175847
+ Retrying in 1 seconds
+seed: 1574115395
+ Retrying in 1 seconds
+seed: 1574153563
+ Retrying in 1 seconds
+seed: 1574120552
+ Retrying in 1 seconds
+seed: 1574172575
+ Retrying in 1 seconds
+seed: 1574098725
+ Retrying in 1 seconds
+seed: 1574122495
+ Retrying in 1 seconds
+seed: 1574161277
+ Retrying in 1 seconds
+seed: 1574172971
+ Retrying in 1 seconds
+seed: 1574178550
+ Retrying in 1 seconds
+seed: 1574094140
+ Retrying in 1 seconds
+seed: 1574159864
+ Retrying in 1 seconds
+seed: 1574144125
+ Retrying in 1 seconds
+seed: 1574163022
+ Retrying in 1 seconds
+seed: 1574105827
+ Retrying in 1 seconds
+seed: 1574124211
+ Retrying in 1 seconds
+seed: 1574156685
+ Retrying in 1 seconds
+seed: 1574146188
+ Retrying in 1 seconds
+seed: 1574104841
+ Retrying in 1 seconds
+seed: 1574125850
+ Retrying in 1 seconds
+seed: 1574116520
+ Retrying in 1 seconds
+seed: 1574171383
+ Retrying in 1 seconds
+seed: 1574169662
+ Retrying in 1 seconds
+seed: 1574178509
+ Retrying in 1 seconds
+seed: 1574097562
+ Retrying in 1 seconds
+seed: 1574157015
+ Retrying in 1 seconds
+seed: 1574100284
+ Retrying in 1 seconds
+seed: 1574143520
+ Retrying in 1 seconds
+seed: 1574131502
+ Retrying in 1 seconds
+seed: 1574163389
+ Retrying in 1 seconds
+seed: 1574098326
+ Retrying in 1 seconds
+seed: 1574150628
+ Retrying in 1 seconds
+seed: 1574135942
+ Retrying in 1 seconds
+seed: 1574115018
+ Retrying in 1 seconds
+seed: 1574090804
+ Retrying in 1 seconds
+seed: 1574181106
+ Retrying in 1 seconds
+seed: 1574099243
+ Retrying in 1 seconds
+seed: 1574114300
+ Retrying in 1 seconds
+seed: 1574143781
+ Retrying in 1 seconds
+seed: 1574137789
+ Retrying in 1 seconds
+seed: 1574121824
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:38861 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:38861 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574138356
+ Retrying in 1 seconds
+seed: 1574114231
+ Retrying in 1 seconds
+seed: 1574140416
+ Retrying in 1 seconds
+seed: 1574167282
+ Retrying in 1 seconds
+seed: 1574175105
+ Retrying in 1 seconds
+seed: 1574157019
+ Retrying in 1 seconds
+seed: 1574141441
+ Retrying in 1 seconds
+seed: 1574114571
+ Retrying in 1 seconds
+seed: 1574144718
+ Retrying in 1 seconds
+seed: 1574093718
+ Retrying in 1 seconds
+seed: 1574124792
+ Retrying in 1 seconds
+seed: 1574102356
+ Retrying in 1 seconds
+seed: 1574177583
+ Retrying in 1 seconds
+seed: 1574082894
+ Retrying in 1 seconds
+seed: 1574163476
+ Retrying in 1 seconds
+seed: 1574144848
+ Retrying in 1 seconds
+seed: 1574083077
+ Retrying in 1 seconds
+seed: 1574159224
+ Retrying in 1 seconds
+seed: 1574137010
+ Retrying in 1 seconds
+seed: 1574147123
+ Retrying in 1 seconds
+seed: 1574097021
+ Retrying in 1 seconds
+seed: 1574109204
+ Retrying in 1 seconds
+seed: 1574169692
+ Retrying in 1 seconds
+seed: 1574156840
+ Retrying in 1 seconds
+seed: 1574091215
+ Retrying in 1 seconds
+seed: 1574082095
+ Retrying in 1 seconds
+seed: 1574175190
+ Retrying in 1 seconds
+seed: 1574176843
+ Retrying in 1 seconds
+seed: 1574106778
+ Retrying in 1 seconds
+seed: 1574103261
+ Retrying in 1 seconds
+seed: 1574086844
+ Retrying in 1 seconds
+seed: 1574095609
+ Retrying in 1 seconds
+seed: 1574094478
+ Retrying in 1 seconds
+seed: 1574149297
+ Retrying in 1 seconds
+seed: 1574097387
+ Retrying in 1 seconds
+seed: 1574108725
+ Retrying in 1 seconds
+seed: 1574159608
+ Retrying in 1 seconds
+seed: 1574101501
+ Retrying in 1 seconds
+seed: 1574180263
+ Retrying in 1 seconds
+seed: 1574158727
+ Retrying in 1 seconds
+seed: 1574158203
+ Retrying in 1 seconds
+seed: 1574134285
+ Retrying in 1 seconds
+seed: 1574113549
+ Retrying in 1 seconds
+seed: 1574130601
+ Retrying in 1 seconds
+seed: 1574160860
+ Retrying in 1 seconds
+seed: 1574123690
+ Retrying in 1 seconds
+seed: 1574153616
+ Retrying in 1 seconds
+seed: 1574158639
+ Retrying in 1 seconds
+seed: 1574112320
+ Retrying in 1 seconds
+seed: 1574111997
+ Retrying in 1 seconds
+seed: 1574127993
+ Retrying in 1 seconds
+seed: 1574117979
+ Retrying in 1 seconds
+seed: 1574090529
+ Retrying in 1 seconds
+seed: 1574156798
+ Retrying in 1 seconds
+seed: 1574168679
+ Retrying in 1 seconds
+seed: 1574108772
+ Retrying in 1 seconds
+seed: 1574135506
+ Retrying in 1 seconds
+seed: 1574167636
+ Retrying in 1 seconds
+seed: 1574123963
+ Retrying in 1 seconds
+seed: 1574113563
+ Retrying in 1 seconds
+seed: 1574138784
+ Retrying in 1 seconds
+seed: 1574105816
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:52487 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:52487 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574171598
+ Retrying in 1 seconds
+seed: 1574153501
+ Retrying in 1 seconds
+seed: 1574131097
+ Retrying in 1 seconds
+seed: 1574116699
+ Retrying in 1 seconds
+seed: 1574165335
+ Retrying in 1 seconds
+seed: 1574178077
+ Retrying in 1 seconds
+seed: 1574106743
+ Retrying in 1 seconds
+seed: 1574145581
+ Retrying in 1 seconds
+seed: 1574105107
+ Retrying in 1 seconds
+seed: 1574111747
+ Retrying in 1 seconds
+seed: 1574082445
+ Retrying in 1 seconds
+seed: 1574146470
+ Retrying in 1 seconds
+seed: 1574082846
+ Retrying in 1 seconds
+seed: 1574171230
+ Retrying in 1 seconds
+seed: 1574134117
+ Retrying in 1 seconds
+seed: 1574126197
+ Retrying in 1 seconds
+seed: 1574128572
+ Retrying in 1 seconds
+seed: 1574176064
+ Retrying in 1 seconds
+seed: 1574114693
+ Retrying in 1 seconds
+seed: 1574100312
+ Retrying in 1 seconds
+seed: 1574159942
+ Retrying in 1 seconds
+seed: 1574148057
+ Retrying in 1 seconds
+seed: 1574166179
+ Retrying in 1 seconds
+seed: 1574082376
+ Retrying in 1 seconds
+seed: 1574159024
+ Retrying in 1 seconds
+seed: 1574149295
+ Retrying in 1 seconds
+seed: 1574121647
+ Retrying in 1 seconds
+seed: 1574128839
+ Retrying in 1 seconds
+seed: 1574152863
+ Retrying in 1 seconds
+seed: 1574154958
+ Retrying in 1 seconds
+seed: 1574111371
+ Retrying in 1 seconds
+seed: 1574175606
+ Retrying in 1 seconds
+seed: 1574117642
+ Retrying in 1 seconds
+seed: 1574152942
+ Retrying in 1 seconds
+seed: 1574087430
+ Retrying in 1 seconds
+seed: 1574152819
+ Retrying in 1 seconds
+seed: 1574100920
+ Retrying in 1 seconds
+seed: 1574168995
+ Retrying in 1 seconds
+seed: 1574136729
+ Retrying in 1 seconds
+seed: 1574176950
+ Retrying in 1 seconds
+seed: 1574097582
+ Retrying in 1 seconds
+seed: 1574131422
+ Retrying in 1 seconds
+seed: 1574111114
+ Retrying in 1 seconds
+seed: 1574104570
+ Retrying in 1 seconds
+seed: 1574111054
+ Retrying in 1 seconds
+seed: 1574177483
+ Retrying in 1 seconds
+seed: 1574169327
+ Retrying in 1 seconds
+seed: 1574144399
+ Retrying in 1 seconds
+seed: 1574173100
+ Retrying in 1 seconds
+seed: 1574129292
+ Retrying in 1 seconds
+seed: 1574170410
+ Retrying in 1 seconds
+seed: 1574117510
+ Retrying in 1 seconds
+seed: 1574111539
+ Retrying in 1 seconds
+seed: 1574100559
+ Retrying in 1 seconds
+seed: 1574136322
+ Retrying in 1 seconds
+seed: 1574108180
+ Retrying in 1 seconds
+seed: 1574169146
+ Retrying in 1 seconds
+seed: 1574096678
+ Retrying in 1 seconds
+seed: 1574160171
+ Retrying in 1 seconds
+seed: 1574101690
+ Retrying in 1 seconds
+seed: 1574085154
+ Retrying in 1 seconds
+seed: 1574104816
+ Retrying in 1 seconds
+Could not connect to TraCI server at localhost:52662 [Errno 111] Connection refused
+ Retrying in 2 seconds
+Could not connect to TraCI server at localhost:52662 [Errno 111] Connection refused
+ Retrying in 3 seconds
+seed: 1574160348
+ Retrying in 1 seconds
+seed: 1574173852
+ Retrying in 1 seconds
+seed: 1574098965
+ Retrying in 1 seconds
+seed: 1574170391
+ Retrying in 1 seconds
+seed: 1574109664
+ Retrying in 1 seconds
+seed: 1574101260
+ Retrying in 1 seconds
+seed: 1574088369
+ Retrying in 1 seconds
+seed: 1574139333
+ Retrying in 1 seconds
+seed: 1574163076
+ Retrying in 1 seconds
+seed: 1574151417
+ Retrying in 1 seconds
+seed: 1574156004
+ Retrying in 1 seconds
+seed: 1574100042
+ Retrying in 1 seconds
+seed: 1574092163
+ Retrying in 1 seconds
+seed: 1574119673
+ Retrying in 1 seconds
+seed: 1574175538
+ Retrying in 1 seconds
+seed: 1574102697
+ Retrying in 1 seconds
+seed: 1574089918
+ Retrying in 1 seconds
+seed: 1574111427
+ Retrying in 1 seconds
+seed: 1574108733
+ Retrying in 1 seconds
+seed: 1574120815
+ Retrying in 1 seconds
+seed: 1574159291
+ Retrying in 1 seconds
+seed: 1574081350
+ Retrying in 1 seconds
+seed: 1574088613
+ Retrying in 1 seconds
+seed: 1574164968
+ Retrying in 1 seconds
+seed: 1574176467
+ Retrying in 1 seconds
+seed: 1574168856
+ Retrying in 1 seconds
+seed: 1574135415
+ Retrying in 1 seconds
+seed: 1574111452
+ Retrying in 1 seconds
+seed: 1574114580
+ Retrying in 1 seconds
+seed: 1574148881
+ Retrying in 1 seconds
+seed: 1574127408
+ Retrying in 1 seconds
+seed: 1574108707
+ Retrying in 1 seconds
+seed: 1574158107
+ Retrying in 1 seconds
+seed: 1574107758
+ Retrying in 1 seconds
+seed: 1574097378
+ Retrying in 1 seconds
+seed: 1574088579
+ Retrying in 1 seconds
+seed: 1574104663
+ Retrying in 1 seconds
+seed: 1574126549
+ Retrying in 1 seconds
+seed: 1574154596
+ Retrying in 1 seconds
+seed: 1574158993
+ Retrying in 1 seconds
+seed: 1574161319
+ Retrying in 1 seconds
+seed: 1574106387
+ Retrying in 1 seconds
+seed: 1574149604
+ Retrying in 1 seconds
+seed: 1574155289
+ Retrying in 1 seconds
+seed: 1574090176
+ Retrying in 1 seconds
+seed: 1574117348
+ Retrying in 1 seconds
+seed: 1574173265
+ Retrying in 1 seconds
+seed: 1574137867
+ Retrying in 1 seconds
+seed: 1574112709
+ Retrying in 1 seconds
+seed: 1574130628
+ Retrying in 1 seconds
+seed: 1574161212
+ Retrying in 1 seconds
+seed: 1574177486
+ Retrying in 1 seconds
+seed: 1574144522
+ Retrying in 1 seconds
+seed: 1574160051
+ Retrying in 1 seconds
+seed: 1574157676
+ Retrying in 1 seconds
+seed: 1574143903
+ Retrying in 1 seconds
+seed: 1574125383
+ Retrying in 1 seconds
+seed: 1574151056
+ Retrying in 1 seconds
+seed: 1574142924
+ Retrying in 1 seconds
+seed: 1574171602
+ Retrying in 1 seconds
+seed: 1574168520
+ Retrying in 1 seconds
+ELAPSED TIME: 3326.75773096
