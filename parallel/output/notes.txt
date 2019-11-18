@@ -3,3 +3,7 @@
 
 1000 runs in 48 processes:
 1296.28842807 seconds
+
+1000 runs in 16 processes:
+3326.75773096
+
