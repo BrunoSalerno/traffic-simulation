@@ -53,7 +53,10 @@ if __name__ == "__main__":
     seq.append('<vType id="{}" vClass="passenger" carFollowModel="IDM" color="green"/>'.format(ACC))
     seq.append('<route id="r1" edges="link1 link2 link3 link4 link5"/>')
 
-    all_vehicles = generateRandomVehicles(car_rate, total, "r1", CAR)
+    all_vehicles =[]
+
+    if car_rate > 0:
+        all_vehicles += generateRandomVehicles(car_rate, total, "r1", CAR)
 
     if acc_rate > 0:
         all_vehicles += generateRandomVehicles(acc_rate, total, "r1", ACC)
