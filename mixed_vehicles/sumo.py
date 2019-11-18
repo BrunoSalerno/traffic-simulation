@@ -22,7 +22,7 @@ sys.path.append(os.path.join(sumo_path, 'tools'))
 import traci
 
 # compose the command line to start either SUMO or SUMO-GUI
-sumo_exe = "sumo-gui"
+sumo_exe = "sumo"
 conf_file = "config.xml"  # the configuration file
 sumo_cmd = [sumo_exe, "-c", conf_file]
 traci.start(sumo_cmd)
@@ -39,6 +39,7 @@ all_speeds = []
 all_variances = []
 all_cum_variances = []
 all_departed = []
+all_accels = []
 
 print ("TOTAL RUNS {}".format(number_runs))
 
@@ -48,6 +49,7 @@ for runs in range(number_runs):
     counter = 0
 
     sim_speeds = []
+    sim_accels = []
     departed = 0
     while i < last_simulation_step:
         traci.simulationStep()
@@ -61,19 +63,24 @@ for runs in range(number_runs):
             if counter > 15:
                 vehicles_ids = traci.vehicle.getIDList()
                 speeds = []
+                accels = []
                 for vid in vehicles_ids:
                     speeds.append(traci.vehicle.getSpeed(vid))
+                    accels.append(traci.vehicle.getAcceleration(vid))
 
                 speed = np.mean(speeds)
-                var   = np.var(speeds)
                 sim_speeds.append(speed)
+                accel = np.mean(accels)
+                sim_accels.append(accel)
         i += 1
     
     mean_speed = np.mean(sim_speeds)
+    mean_accel = np.mean(sim_accels)
     var_speed = np.var(sim_speeds)
 
     all_departed.append(departed)
     all_speeds.append(mean_speed)
+    all_accels.append(mean_accel)
     all_variances.append(var_speed)
     all_cum_variances.append(np.var(all_speeds))
 
@@ -85,9 +92,10 @@ traci.close()  # closing simulation
 
 df = pd.DataFrame({
     'mean_speed': all_speeds,
+    'mean_accel': all_accels,
     'variance': all_variances,
     'cum_variance': all_cum_variances,
-    'departed': all_departed
+    'departed': all_departed,
     }, index=np.arange(1, number_runs + 1).tolist())
 
 print("Final stats:")
@@ -100,9 +108,9 @@ p1.set_title("Avg speed (m/s) - {} runs".format(number_runs))
 p1.set_xlabel("Speed - m/s")
 p1.set_ylabel("Frequency")
 
-#df['variance'].plot(ax=p2, use_index=True, label="variance")
-#p2.set_xlabel("Simulation")
-#p2.set_ylabel("Variance - (m/s)^2")
+df['mean_accel'].hist(ax=p2)
+p2.set_ylabel("Accel - m/s^2")
+p2.set_xlabel("Simulation")
 
 df['cum_variance'].plot(ax=p3, use_index=True, label="cum. variance")
 p3.set_xlabel("Simulation")
