@@ -22,7 +22,7 @@ sys.path.append(os.path.join(sumo_path, 'tools'))
 import traci
 
 # compose the command line to start either SUMO or SUMO-GUI
-sumo_exe = "sumo"
+sumo_exe = "sumo-gui"
 conf_file = "config.xml"  # the configuration file
 sumo_cmd = [sumo_exe, "-c", conf_file]
 traci.start(sumo_cmd)
