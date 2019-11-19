@@ -98,25 +98,5 @@ df = pd.DataFrame({
     'departed': all_departed,
     }, index=np.arange(1, number_runs + 1).tolist())
 
-print("Final stats:")
-print(df)
-
-fig, (p1,p2,p3,p4) = plt.subplots(4,1,sharex=False, sharey=False)
-
-df['mean_speed'].hist(ax=p1)
-p1.set_title("Avg speed (m/s) - {} runs".format(number_runs))
-p1.set_xlabel("Speed - m/s")
-p1.set_ylabel("Frequency")
-
-df['mean_accel'].hist(ax=p2)
-p2.set_ylabel("Freq. accel - m/s^2")
-p2.set_xlabel("Simulation")
-
-df['cum_variance'].plot(ax=p3, use_index=True, label="cum. variance")
-p3.set_xlabel("Simulation")
-p3.set_ylabel("Cum variance - (m/s)^2")
-
-df['departed'].plot(ax=p4, use_index=True)
-p4.set_xlabel("Simulation")
-p4.set_ylabel("Departed vehicles")
-plt.show()
+filename = "{}runs.csv".format(number_runs)
+df.to_csv(filename)

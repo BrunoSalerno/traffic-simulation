@@ -37,9 +37,9 @@ def writeToFile(strList, filename):
 
 if __name__ == "__main__":
     total = 3600
-    veh = 3000
-    acc_proportion = 0
-    filename = 'routes-0ACC'
+    veh = 3000.0
+    acc_proportion = 1
+    filename = 'routes-1ACC'
 
     car_rate = veh * (1 - acc_proportion) / total
     acc_rate = veh * acc_proportion / total
