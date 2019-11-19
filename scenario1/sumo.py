@@ -90,5 +90,5 @@ df = pd.DataFrame({
     'departed': all_departed
     }, index=np.arange(1, number_runs + 1).tolist())
 
-filename = "{}runs-{}mins.csv".format(number_runs, int(last_simulation_step / 600))
+filename = "{}runs.csv".format(number_runs)
 df.to_csv(filename)

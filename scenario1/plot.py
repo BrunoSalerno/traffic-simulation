@@ -19,7 +19,7 @@ print("Mean speed: {} m/s".format(df['mean_speed'].mean()))
 fig, (p1,p2,p3) = plt.subplots(3,1,sharex=False, sharey=False)
 
 df['mean_speed'].hist(ax=p1)
-p1.set_title("Avg speed (m/s) - 1 run")
+p1.set_title("Avg speed (m/s) - {} runs".format(len(df)))
 p1.set_xlabel("Speed - m/s")
 p1.set_ylabel("Frequency")
 
@@ -28,10 +28,10 @@ p1.set_ylabel("Frequency")
 #p2.set_ylabel("Variance - (m/s)^2")
 
 df['cum_variance2'].plot(ax=p2, use_index=True)
-p2.set_xlabel("Minute")
+p2.set_xlabel("Simulation")
 p2.set_ylabel("Variance - (m/s)^2")
 
 df['departed'].plot(ax=p3, use_index=True)
-p3.set_xlabel("Minute")
+p3.set_xlabel("Simulation")
 p3.set_ylabel("Departed vehicles")
 plt.show()
