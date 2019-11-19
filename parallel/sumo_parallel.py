@@ -70,7 +70,6 @@ if __name__ == "__main__":
     if len(sys.argv) >=4 and sys.argv[3] == '--no-interactive':
         interactive = False
 
-
     print("Info about the simulation:")
     print("{} processors".format(n_processors))
     print("{} processes".format(max_process))
@@ -93,7 +92,6 @@ if __name__ == "__main__":
 
     for proc in procs:
         proc.join()
-
 
     end_time = time.time()
     print("ELAPSED TIME: {}".format(end_time - start_time))
