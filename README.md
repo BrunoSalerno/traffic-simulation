@@ -2,7 +2,7 @@
 
 Code for a series of simulations with [SUMO](https://github.com/eclipse/sumo) for very simple road networks.
 
-Asignment and folder structure:
+Asignments and folder structure:
 
 |Assignment |Dir   |
 |---|---|
@@ -14,4 +14,5 @@ Asignment and folder structure:
 
 
 AUTHORS:
+
 Bruno Salerno
