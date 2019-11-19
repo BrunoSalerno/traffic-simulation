@@ -1,6 +1,6 @@
 # Traffic Simulation AH2174, KTH. 2nd lab code
 
-This repository contains the code of a series of microscopic traffic simulations with [SUMO](https://github.com/eclipse/sumo), for very simple road networks.
+This directory contains the code of a series of microscopic traffic simulations with [SUMO](https://github.com/eclipse/sumo), for very simple road networks.
 
 Asignments and folder structure:
 
