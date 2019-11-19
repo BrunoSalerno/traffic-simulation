@@ -40,6 +40,8 @@ all_variances = []
 all_cum_variances = []
 all_departed = []
 
+all_link_speeds = {}
+
 print ("TOTAL RUNS {}".format(number_runs))
 
 for runs in range(number_runs):
@@ -49,6 +51,13 @@ for runs in range(number_runs):
 
     sim_speeds = []
     departed = 0
+    link_speeds = {
+            'link1':[],
+            'link2':[],
+            'link3':[],
+            'link4':[],
+            'link5':[]
+            }
     while i < last_simulation_step:
         traci.simulationStep()
 
@@ -59,6 +68,10 @@ for runs in range(number_runs):
 
             # Warm-up check (15 min threshold)
             if counter > 15:
+                for link in link_speeds:
+                    link_mean_speed = traci.edge.getLastStepMeanSpeed(link)
+                    link_speeds[link].append(link_mean_speed)
+                
                 vehicles_ids = traci.vehicle.getIDList()
                 speeds = []
                 for vid in vehicles_ids:
@@ -77,18 +90,35 @@ for runs in range(number_runs):
     all_variances.append(var_speed)
     all_cum_variances.append(np.var(all_speeds))
 
+    for link in link_speeds:
+        if not link in all_link_speeds:
+            all_link_speeds[link] = []
+        all_link_speeds[link].append(np.mean(link_speeds[link]))
+
     print ("Simulation Run Number {} has ended".format(runs + 1))
 
     traci.load(["-c", conf_file, "--random"])  # reloading simulation for the next run, with a random seed
 
 traci.close()  # closing simulation
 
-df = pd.DataFrame({
+data = {
     'mean_speed': all_speeds,
     'variance': all_variances,
     'cum_variance': all_cum_variances,
     'departed': all_departed
-    }, index=np.arange(1, number_runs + 1).tolist())
+    }
+data.update(all_link_speeds)
+
+df = pd.DataFrame(data, index=np.arange(1, number_runs + 1).tolist())
 
 filename = "{}runs.csv".format(number_runs)
 df.to_csv(filename)
+
+for link in all_link_speeds:
+    df[link].plot(use_index=True, label=link)
+
+plt.title("Avg speed by link - {} runs".format(number_runs))
+plt.xlabel("Simulation")
+plt.ylabel("Link speed (m/s)")
+plt.legend()
+plt.show()
