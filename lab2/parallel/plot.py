@@ -9,8 +9,7 @@ import matplotlib.pyplot as plt
 
 csv_file = sys.argv[1]
 df = pd.read_csv(csv_file)
-df['sim'] = df.index + 1
-df.set_index('sim', inplace=True)
+df.set_index(df.index + 1, inplace=True)
 
 #Variance2 = Variance of the sample mean
 variances = []
