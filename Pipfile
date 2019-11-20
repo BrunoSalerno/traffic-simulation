@@ -10,6 +10,7 @@ matplotlib = "*"
 numpy = "*"
 tabulate = "*"
 pandas = "*"
+scipy = "*"
 
 [requires]
 python_version = "3.7"
