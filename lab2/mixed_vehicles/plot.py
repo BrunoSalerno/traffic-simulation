@@ -16,6 +16,7 @@ print(df)
 
 print("Mean speed: {} m/s".format(df['mean_speed'].mean()))
 print("Mean accel: {} m/s^2".format(df['mean_accel'].mean()))
+print("Mean departed: {}".format(df['departed'].mean()))
 
 fig, (p1,p2,p3,p4) = plt.subplots(4,1,sharex=False, sharey=False)
 
