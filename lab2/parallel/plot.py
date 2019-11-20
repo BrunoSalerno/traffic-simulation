@@ -16,7 +16,7 @@ df.set_index('sim')
 variances = []
 for i in range(1, len(df.index) + 1):
     sample = df['mean_speed'].iloc[:i]
-    variances.append(np.var(sample)/(i))
+    variances.append(np.var(sample)/i)
 
 df['cum_variance2'] = variances
 
