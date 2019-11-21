@@ -85,6 +85,10 @@ if __name__ == "__main__":
     f.write("mean_speed,variance,departed\n")
     f.close()
 
+    # Hack to allow us to use only one process
+    if max_process == 1:
+        max_process = 2
+
     for i in range(1, max_process):
         proc = multiprocessing.Process(target=simulation_handler, args=(sumo_cmd,outputfile,runs_per_process))
         procs.append(proc)
