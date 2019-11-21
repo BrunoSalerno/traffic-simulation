@@ -19,7 +19,7 @@ print("Mean speed: {} m/s".format(df['mean_speed'].mean()))
 fig, (p1,p2,p3) = plt.subplots(3,1,sharex=False, sharey=False)
 
 df['mean_speed'].hist(ax=p1)
-p1.set_title("Avg speed (m/s) - 1 run, {} min".format(len(df) + 15))
+p1.set_title("Avg speed (m/s) - 20 runs of {} min".format(len(df) + 15))
 p1.set_xlabel("Speed - m/s")
 p1.set_ylabel("Frequency")
 

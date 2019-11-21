@@ -31,12 +31,11 @@ Simulation example in the following section, update the written code according t
 """
 # for sequential runs, see: http://sumo.dlr.de/wiki/TraCI#Shutdown
 
-number_runs = 1  # number of simulation repetitions
+number_runs = 20  # number of simulation repetitions
 last_simulation_step = 36001
 
-all_speeds = []
-all_variances = []
-all_departed = []
+all_speeds = {}
+all_departed = {}
 
 print ("TOTAL RUNS {}:".format(number_runs))
 
@@ -45,19 +44,14 @@ for runs in range(number_runs):
     i = 1
     counter = 0
     departed = 0
-    loaded = 0
+
     while i < last_simulation_step:
         traci.simulationStep()
-        # Hint: filter out warm up period
-        # Hint: collect output from simulation steps that correspond to a full minute
-        # Hint: use IDList = traci.vehicle.getIDList() to capture all the vehicles in a specific time, read more here https://sumo.dlr.de/docs/TraCI/Vehicle_Value_Retrieval.html
 
         departed += traci.simulation.getDepartedNumber()
-        loaded += traci.simulation.getLoadedNumber()
 
         if i % 600 == 0:
             counter += 1
-            #print ("full minute number {}".format(counter))
 
             # Warm-up check (15 min threshold)
             if counter > 15:
@@ -66,9 +60,14 @@ for runs in range(number_runs):
                 for vid in vehicles_ids:
                     speeds.append(traci.vehicle.getSpeed(vid))
 
-                all_speeds.append(np.mean(speeds))
-                all_variances.append(np.var(all_speeds))
-                all_departed.append(departed)
+                key = 'sim' + str(runs + 1)
+                if not key in all_speeds:
+                    all_speeds[key] = []
+                if not key in all_departed:
+                    all_departed[key] = []
+
+                all_speeds[key].append(np.mean(speeds))
+                all_departed[key].append(departed)
 
         i += 1
 
@@ -76,13 +75,21 @@ for runs in range(number_runs):
 
 traci.close()  # closing simulation
 
-minutes = np.arange(16, 16 + len(all_speeds)).tolist()
+df_speeds = pd.DataFrame.from_dict(all_speeds, orient='index').transpose()
+df_departed = pd.DataFrame.from_dict(all_departed, orient='index').transpose()
 
 df = pd.DataFrame({
-    'mean_speed': all_speeds,
-    'cum_variance': all_variances,
-    'cum_departed': all_departed
-    }, index=minutes)
+    'mean_speed': df_speeds.mean(axis=1),
+    'mean_departed': df_departed.mean(axis=1)
+    })
+df.set_index(df.index + 16, inplace=True)
 
-filename = "1run-{}mins.csv".format(int(last_simulation_step / 600))
+variances = []
+for i in range(1, len(df.index) + 1):
+    sample = df['mean_speed'].iloc[:i]
+    variances.append(np.var(sample))
+
+df['cum_variance'] = variances
+
+filename = "{}runs-{}mins.csv".format(number_runs, int(last_simulation_step / 600))
 df.to_csv(filename)
