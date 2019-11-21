@@ -36,9 +36,7 @@ last_simulation_step = 36001
 
 all_speeds = []
 all_variances = []
-all_n_vehicles = []
 all_departed = []
-all_loaded = []
 
 print ("TOTAL RUNS {}:".format(number_runs))
 
@@ -64,22 +62,14 @@ for runs in range(number_runs):
             # Warm-up check (15 min threshold)
             if counter > 15:
                 vehicles_ids = traci.vehicle.getIDList()
-                n_vehicles = len(vehicles_ids)
-                all_n_vehicles.append(n_vehicles)
                 speeds = []
                 for vid in vehicles_ids:
                     speeds.append(traci.vehicle.getSpeed(vid))
 
-                speed = np.mean(speeds)
-                all_speeds.append(speed)
-                var = np.var(all_speeds)
-                all_variances.append(var)
+                all_speeds.append(np.mean(speeds))
+                all_variances.append(np.var(all_speeds))
                 all_departed.append(departed)
-                all_loaded.append(loaded)
 
-                print("{} vehicles".format(n_vehicles))
-                print("Avg speed {}".format(speed))
-                print("Variance {}".format(var))
         i += 1
 
     traci.load(["-c", conf_file, "--random"])  # reloading simulation for the next run, with a random seed
