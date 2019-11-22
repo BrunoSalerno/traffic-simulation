@@ -18,17 +18,17 @@ print("Mean speed: {} m/s".format(df['mean_speed'].mean()))
 print("Mean accel: {} m/s^2".format(df['mean_accel'].mean()))
 print("Mean departed: {}".format(df['departed'].mean()))
 
-fig, (p1,p2,p3,p4) = plt.subplots(4,1,sharex=False, sharey=False)
+fig, (p1,p2) = plt.subplots(2,1,sharex=False, sharey=False)
 
 df['mean_speed'].hist(ax=p1)
-p1.set_title("Avg speed (m/s) - {} runs".format(len(df)))
+p1.set_title("Mean speed and accel. distributions - {} runs".format(len(df)))
 p1.set_xlabel("Speed - m/s")
 p1.set_ylabel("Frequency")
 
 df['mean_accel'].hist(ax=p2)
-p2.set_ylabel("Freq. accel - m/s^2")
-p2.set_xlabel("Simulation")
-
+p2.set_xlabel("Accel - m/s^2")
+p2.set_ylabel("Frequency")
+'''
 df['cum_variance2'].plot(ax=p3, use_index=True)
 p3.set_xlabel("Simulation")
 p3.set_ylabel("Variance - (m/s)^2")
@@ -36,4 +36,5 @@ p3.set_ylabel("Variance - (m/s)^2")
 df['departed'].plot(ax=p4, use_index=True)
 p4.set_xlabel("Simulation")
 p4.set_ylabel("Departed vehicles")
+'''
 plt.show()
