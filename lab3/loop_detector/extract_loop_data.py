@@ -10,10 +10,6 @@ import matplotlib.pyplot as plt
 import collections
 import sys
 import numpy as np
-"""
-Extracting flow from lane 0 in link 4:
-"""
-
 
 def extractMeanFeature(xml,feature):
     tree = ET.parse(xml)
