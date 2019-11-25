@@ -41,8 +41,8 @@ def extractAndPlot(xml, feature):
 
 if __name__ == "__main__":
     file = sys.argv[1]
-    extractAndPlot(file, 'speed')
 
+    extractAndPlot(file, 'speed')
     extractAndPlot(file, 'harmonicMeanSpeed')
 
     plt.grid(True)
