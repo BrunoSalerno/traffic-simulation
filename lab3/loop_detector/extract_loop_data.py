@@ -34,10 +34,7 @@ def extractAndPlot(xml, feature):
     data = extractMeanFeature(xml, feature)
     time_range = list(data.keys())
     values = list(data.values())
-    print(values)
     plt.plot(time_range, values, label=feature)
-    plt.xlabel('Duration (minutes)')
-    plt.ylabel('Speed (m/s)')
 
 if __name__ == "__main__":
     file = sys.argv[1]
@@ -45,6 +42,8 @@ if __name__ == "__main__":
     extractAndPlot(file, 'speed')
     extractAndPlot(file, 'harmonicMeanSpeed')
 
+    plt.xlabel('Duration (minutes)')
+    plt.ylabel('Speed (m/s)')
     plt.grid(True)
     plt.legend()
     plt.show()
