@@ -17,6 +17,7 @@ print(df)
 print("Mean speed: {} m/s".format(df['mean_speed'].mean()))
 print("Mean accel: {} m/s^2".format(df['mean_accel'].mean()))
 print("Mean departed: {}".format(df['departed'].mean()))
+print("Sample mean accel variance: {}".format(df['mean_accel'].var()/20))
 
 fig, (p1,p2) = plt.subplots(2,1,sharex=False, sharey=False)
 
