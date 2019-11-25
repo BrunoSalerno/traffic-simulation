@@ -1,5 +1,5 @@
 <additional>
-  <inductionLoop id="il1" lane="link4_0" pos="500" freq="300" file="il-out.xml"/>
-  <inductionLoop id="il2" lane="link4_1" pos="500" freq="300" file="il-out.xml"/>
-  <inductionLoop id="il3" lane="link4_2" pos="500" freq="300" file="il-out.xml"/>
+  <inductionLoop id="il1" lane="link4_0" pos="500" freq="100" file="output/il-out.xml"/>
+  <inductionLoop id="il2" lane="link4_1" pos="500" freq="100" file="output/il-out.xml"/>
+  <inductionLoop id="il3" lane="link4_2" pos="500" freq="100" file="output/il-out.xml"/>
 </additional>

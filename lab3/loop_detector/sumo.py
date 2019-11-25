@@ -22,9 +22,9 @@ sys.path.append(os.path.join(sumo_path, 'tools'))
 import traci
 
 # compose the command line to start either SUMO or SUMO-GUI
-sumo_exe = "sumo-gui"
+sumo_exe = "sumo"
 conf_file = "config.xml"  # the configuration file
-sumo_cmd = [sumo_exe, "-c", conf_file]
+sumo_cmd = [sumo_exe, "-c", conf_file, '--random']
 traci.start(sumo_cmd)
 
 """
@@ -32,8 +32,8 @@ Simulation example in the following section, update the written code according t
 """
 # for sequential runs, see: http://sumo.dlr.de/wiki/TraCI#Shutdown
 
-number_runs = 20  # number of simulation repetitions
-last_simulation_step = 36001
+number_runs = 1  # number of simulation repetitions
+last_simulation_step = 18001 # 30 min
 
 all_speeds = []
 all_variances = []
@@ -97,7 +97,7 @@ for runs in range(number_runs):
 
     print ("Simulation Run Number {} has ended".format(runs + 1))
 
-    traci.load(["-c", conf_file, "--random"])  # reloading simulation for the next run, with a random seed
+    #traci.load(["-c", conf_file, "--random"])  # reloading simulation for the next run, with a random seed
 
 traci.close()  # closing simulation
 
@@ -113,12 +113,3 @@ df = pd.DataFrame(data, index=np.arange(1, number_runs + 1).tolist())
 
 filename = "{}runs.csv".format(number_runs)
 df.to_csv(filename)
-
-for link in all_link_speeds:
-    df[link].plot(use_index=True, label=link)
-
-plt.title("Avg speed by link - {} runs".format(number_runs))
-plt.xlabel("Simulation")
-plt.ylabel("Link speed (m/s)")
-plt.legend()
-plt.show()
