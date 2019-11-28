@@ -21,8 +21,12 @@ if __name__ == "__main__":
     filename = sys.argv[1]
     xml = ET.parse(filename)
 
-    vals = fetch_edge_attrs(xml.getroot(), 'link4', ['speed', 'density'])
+    edge = 'link4'
+    vals = fetch_edge_attrs(xml.getroot(), edge, ['speed', 'density'])
     print(vals)
 
     plt.scatter(vals['density'], vals['speed'])
+    plt.xlabel('Density (#veh/km)')
+    plt.ylabel('Speed (m/s)')
+    plt.title('{}: Speed vs Density (60 min)'.format(edge))
     plt.show()
