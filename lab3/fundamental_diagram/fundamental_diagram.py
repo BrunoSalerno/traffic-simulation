@@ -10,13 +10,15 @@ def fetch_edge_attrs(data, edge_id, attrs):
     values = {}
     intervals = data.findall('interval')
     for interval in intervals:
-        for edge in interval:
-            if edge.get('id') == edge_id:
-                for attr in attrs:
-                    if not attr in values:
-                        values[attr] = []
-                    if edge.get(attr) is not None:
-                        values[attr].append(float(edge.get(attr)))
+        end = float(interval.get('end'))
+        if (end / 60) > 15: # warmup check
+            for edge in interval:
+                if edge.get('id') == edge_id:
+                    for attr in attrs:
+                        if not attr in values:
+                            values[attr] = []
+                        if edge.get(attr) is not None:
+                            values[attr].append(float(edge.get(attr)))
     return values
 
 if __name__ == "__main__":
