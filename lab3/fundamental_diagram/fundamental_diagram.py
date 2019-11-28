@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 import xml.etree.ElementTree as ET
 import sys
+import numpy as np
 
 def fetch_edge_attrs(data, edge_id, attrs):
     values = {}
@@ -14,7 +15,8 @@ def fetch_edge_attrs(data, edge_id, attrs):
                 for attr in attrs:
                     if not attr in values:
                         values[attr] = []
-                    values[attr].append(edge.get(attr))
+                    if edge.get(attr) is not None:
+                        values[attr].append(float(edge.get(attr)))
     return values
 
 if __name__ == "__main__":
@@ -26,6 +28,14 @@ if __name__ == "__main__":
     print(vals)
 
     plt.scatter(vals['density'], vals['speed'])
+    b3, b2, b1, a= np.polyfit(vals['density'], vals['speed'], 3)
+
+    # Fit
+    x = np.linspace(min(vals['density']),max(vals['density']))
+    y = a + b1 * x + b2 * (x ** 2) + b3 * (x ** 3)
+    plt.plot(x, y, color='black')
+    #
+
     plt.xlabel('Density (#veh/km)')
     plt.ylabel('Speed (m/s)')
     plt.title('{}: Speed vs Density (60 min)'.format(edge))
