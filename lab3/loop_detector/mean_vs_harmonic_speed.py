@@ -11,9 +11,6 @@ import collections
 import sys
 import numpy as np
 
-def density(flow, speed):
-    return flow / speed
-
 def extractMeanFeature(xml,feature, detectors):
     tree = ET.parse(xml)
     root = tree.getroot()
