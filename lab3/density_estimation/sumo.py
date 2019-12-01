@@ -111,5 +111,5 @@ data.update(all_link_speeds)
 
 df = pd.DataFrame(data, index=np.arange(1, number_runs + 1).tolist())
 
-filename = "{}runs.csv".format(number_runs)
-df.to_csv(filename)
+#filename = "{}runs.csv".format(number_runs)
+#df.to_csv(filename)
