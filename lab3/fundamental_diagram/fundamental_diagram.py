@@ -33,11 +33,11 @@ if __name__ == "__main__":
     print(vals)
 
     plt.scatter(vals['density'], vals['speed'])
-    b3, b2, b1, a= np.polyfit(vals['density'], vals['speed'], 3)
 
-    # Fit
+    # The fit is a linear model, following Greenshield
+    b1, a= np.polyfit(vals['density'], vals['speed'], 1)
     x = np.linspace(min(vals['density']),max(vals['density']))
-    y = a + b1 * x + b2 * (x ** 2) + b3 * (x ** 3)
+    y = a + b1 * x
     plt.plot(x, y, color='black')
     #
 
