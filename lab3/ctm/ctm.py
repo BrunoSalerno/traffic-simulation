@@ -1,3 +1,5 @@
+import numpy as np
+
 class Edge:
     def __init__(self, tau, v0, p_m, m, q_a, c, c_nextk, d_prevk):
         self.tau = tau
@@ -51,21 +53,27 @@ if __name__ == '__main__':
     d_prevk = 10
     p_a = 40
 
+    iterations = []
     for i in range(12):
         print('Min:',i)
-        prev_prev = None
-        prev_edge = None
 
+        edges_data = []
         for e in range(edges):
-            edge = Edge(tau, v0, p_m, m, q_a, c, c_nextk, d_prevk)
+
+            edge_tminus1 = iterations[-1][e] if i > 0 else None
+            prev_edge = edges_data[-1] if e > 0 else None
+
+            if edge_tminus1:
+                q_a = edge_tminus1.q_a_next(p_a, q1)
+
             if prev_edge:
-                if prev_prev:
-                    p_a = prev_prev.p_a_next(p_a,prev_edge.q0())
                 q0 = prev_edge.q0()
                 q1 = edge.q0()
                 print('p_a:', p_a, 'q0:', q0, 'q1:', q1)
-                q_a = prev_edge.q_a_next(p_a, q1)
                 d_prevk = prev_edge.d()
-                c_nextk = edge.c
-            prevprev = prev_edge
-            prev_edge = edge
+
+            edge = Edge(tau, v0, p_m, m, q_a, c, c_nextk, d_prevk)
+            c_nextk = edge.c
+
+            edges_data.append(edge) #= np.append(edges_data, edge)
+        iterations.append(edges_data)# = np.append(iterations, edges_data)
