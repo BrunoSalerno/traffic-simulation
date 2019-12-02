@@ -35,11 +35,18 @@ if __name__ == "__main__":
     plt.scatter(vals['density'], vals['speed'])
 
     # The fit is a linear model, following Greenshield
+    # y(x) = a + b1.x
+    # and
+    # v(p) = vf(1 - p/pj)
+    # v(p) = vf - vf/pj * p
+    # so
+    # a = vf
+    # b1 = - vf/pj
     b1, a= np.polyfit(vals['density'], vals['speed'], 1)
     x = np.linspace(min(vals['density']),max(vals['density']))
     y = a + b1 * x
     plt.plot(x, y, color='black')
-    #
+    print('betas:', a, b1)
 
     plt.xlabel('Density (#veh/km)')
     plt.ylabel('Speed (m/s)')
