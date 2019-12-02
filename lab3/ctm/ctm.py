@@ -1,7 +1,8 @@
-class CTM:
-    def __init__(self, c, tau, v0, p_m, m):
+class Iteration:
+    def __init__(self, c, tau, v0, p_m, m, q_a):
         self._q = []
         self._c = c
+        self._q_a = q_a
         self.tau = tau
         self.v0 = v0
         self.p_m = p_m
@@ -34,7 +35,7 @@ class CTM:
     def q1(self, k):
         return min(d(k),s(k+1))
 
-    def p_a(self, q, t):
+    def p_a_next(self, k):
 
     def q_e(self, p):
         if p <= self.pc():
@@ -42,5 +43,8 @@ class CTM:
         else
             return 1/self.tau * (1 - p/self.p_m)
 
-    def q_a(self, q, t):
-        return self.m * self.q_e(self.p_a(t+1)/self.m) # p_a(t+1) ?
+    def q_a(self, k):
+        return self._q_a[k]
+
+    def q_a_next(self, k):
+        return self.m * self.q_e(self.p_a_next(k)/self.m) # p_a(t+1) ?
