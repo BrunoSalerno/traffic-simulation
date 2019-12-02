@@ -22,7 +22,7 @@ class Edge:
         if self.q_a > self.pc():
             return self.q_a
         else:
-            return self.c()
+            return self.c_nextk
 
     def d(self):
         if self.q_a <= self.pc():
@@ -33,12 +33,11 @@ class Edge:
     def q0(self):
         return min(self.d_prevk,self.s())
 
-    def p_a_next(self, q1, delta_x = 1, delta_t = 5 / 60):
-        p = 40
-        return p + 1/delta_x * (self.q0() - q1) * delta_t
+    def p_a_next(self, p_a, q1, delta_x = 1, delta_t = 5 / 60):
+        return p_a + 1/delta_x * (self.q0() - q1) * delta_t
 
-    def q_a_next(self, q1):
-        return self.m * self.q_e(self.p_a_next(q1)/self.m)
+    def q_a_next(self, p_a, q1):
+        return self.m * self.q_e(self.p_a_next(p_a, q1)/self.m)
 
 if __name__ == '__main__':
     edges = 5
@@ -50,14 +49,23 @@ if __name__ == '__main__':
     c = 5000
     c_nextk = 5000
     d_prevk = 10
+    p_a = 40
 
     for i in range(12):
         print('Min:',i)
+        prev_prev = None
         prev_edge = None
+
         for e in range(edges):
             edge = Edge(tau, v0, p_m, m, q_a, c, c_nextk, d_prevk)
             if prev_edge:
-                print(prev_edge.q0())
-                q_a = prev_edge.q_a_next(edge.q0())
+                if prev_prev:
+                    p_a = prev_prev.p_a_next(p_a,prev_edge.q0())
+                q0 = prev_edge.q0()
+                q1 = edge.q0()
+                print('p_a:', p_a, 'q0:', q0, 'q1:', q1)
+                q_a = prev_edge.q_a_next(p_a, q1)
                 d_prevk = prev_edge.d()
+                c_nextk = edge.c
+            prevprev = prev_edge
             prev_edge = edge
