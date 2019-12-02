@@ -1,4 +1,14 @@
 class CTM:
+    def __init__(self, c):
+        self._q = []
+        self._c = c
+
+    def q(self, k):
+        return self._q[k]
+
+    def c(self, k):
+        return self._c[k]
+
     def s(self, k):
         if qa(k) > pc:
             return q(k)
