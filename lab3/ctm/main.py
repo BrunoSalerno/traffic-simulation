@@ -8,9 +8,15 @@ import pandas as pd
 from ctm import Simulation
 
 if __name__ == '__main__':
-    sim = Simulation()
+    edges = 5
+    m = 3
+    tau = 1
+
+    sim = Simulation(edges, m, tau)
     output = sim.run()
+
     print(output)
+
     for edge_i in output:
         ys = [e['q0'] for e in output[edge_i]]
         plt.plot(ys, label='edege {}'.format(edge_i))

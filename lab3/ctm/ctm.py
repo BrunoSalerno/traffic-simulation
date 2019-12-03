@@ -40,12 +40,14 @@ class Edge:
         return self.m * self.q_e(self.p_a_next(p_a, q1)/self.m)
 
 class Simulation:
+    def __init__(self, edges, m, tau):
+        self.edges = edges
+        self.m = m
+        self.tau = tau
+
     def run(self):
-        edges = 5
-        tau = 1
         v0 = 40
         p_m = 50
-        m = 3
         q_a = 3000
         c = 5000
         c_nextk = 5000
@@ -57,7 +59,7 @@ class Simulation:
         iterations = []
         for i in range(12):
             edges_data = []
-            for e in range(edges):
+            for e in range(self.edges):
 
                 edge_tminus1 = iterations[-1][e] if i > 0 else None
                 prev_edge = edges_data[-1] if e > 0 else None
@@ -76,7 +78,7 @@ class Simulation:
 
                     d_prevk = prev_edge.d()
 
-                edge = Edge(tau, v0, p_m, m, q_a, c, c_nextk, d_prevk)
+                edge = Edge(self.tau, v0, p_m, self.m, q_a, c, c_nextk, d_prevk)
                 c_nextk = edge.c
 
                 edges_data.append(edge) #= np.append(edges_data, edge)
