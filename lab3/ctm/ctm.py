@@ -68,7 +68,7 @@ class Simulation:
 
                 edge = Edge(self.tau, v0, p_a, p_m, self.m, q_a, c, c_nextk, d_prevk)
 
-                if prev_edge and edge_tminus1 and prev_edge_tminus1:
+                if prev_edge and edge_tminus1:
                     q0 = prev_edge.q0()
                     q1 = edge.q0()
                     q1_tminus1 = edge_tminus1.q0()
