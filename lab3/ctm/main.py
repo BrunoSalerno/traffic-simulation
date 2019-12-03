@@ -20,6 +20,8 @@ if __name__ == '__main__':
 
     for edge_i in output:
         ys = [e['q0'] for e in output[edge_i]]
-        plt.plot(ys, label='edege {}'.format(edge_i))
+        ys = ys[3:]
+        plt.plot(ys, label='q0 edge {}'.format(edge_i))
+
     plt.legend()
     plt.show()
