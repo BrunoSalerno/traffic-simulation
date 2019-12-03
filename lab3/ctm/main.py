@@ -27,6 +27,7 @@ if __name__ == '__main__':
             prev_edge = edges_data[-1] if e > 0 else None
 
             if edge_tminus1:
+                p_a = edge_tminus1.p_a_next(p_a, q1)
                 q_a = edge_tminus1.q_a_next(p_a, q1)
 
             if prev_edge:
