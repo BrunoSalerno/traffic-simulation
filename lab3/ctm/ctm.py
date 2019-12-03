@@ -1,7 +1,8 @@
 class Edge:
-    def __init__(self, tau, v0, p_m, m, q_a, c, c_nextk, d_prevk):
+    def __init__(self, tau, v0, p_a, p_m, m, q_a, c, c_nextk, d_prevk):
         self.tau = tau
         self.v0 = v0
+        self.p_a = p_a
         self.p_m = p_m
         self.m = m
         self.q_a = q_a
@@ -33,17 +34,18 @@ class Edge:
     def q0(self):
         return min(self.d_prevk,self.s())
 
-    def p_a_next(self, p_a, q1, delta_x = 1, delta_t = 5 / 60):
-        return p_a + 1/delta_x * (self.q0() - q1) * delta_t
+    def p_a_next(self, q1, delta_x = 1, delta_t = 5 / 60):
+        return self.p_a + 1/delta_x * (self.q0() - q1) * delta_t
 
-    def q_a_next(self, p_a, q1):
-        return self.m * self.q_e(self.p_a_next(p_a, q1)/self.m)
+    def q_a_next(self, q1):
+        return self.m * self.q_e(self.p_a_next(q1)/self.m)
 
 class Simulation:
-    def __init__(self, edges, m, tau):
+    def __init__(self, edges, m, tau, n_iters):
         self.edges = edges
         self.m = m
         self.tau = tau
+        self.n_iters = n_iters
 
     def run(self):
         v0 = 40
@@ -57,20 +59,21 @@ class Simulation:
         output = {}
 
         iterations = []
-        for i in range(12):
+        for i in range(self.n_iters):
             edges_data = []
             for e in range(self.edges):
-
-                edge_tminus1 = iterations[-1][e] if i > 0 else None
                 prev_edge = edges_data[-1] if e > 0 else None
+                edge_tminus1 = iterations[-1][e] if i > 0 else None 
+                prev_edge_tminus1 = iterations[-1][e-1] if i > 0 and e > 0 else None
 
-                if edge_tminus1:
-                    p_a = edge_tminus1.p_a_next(p_a, q1)
-                    q_a = edge_tminus1.q_a_next(p_a, q1)
+                edge = Edge(self.tau, v0, p_a, p_m, self.m, q_a, c, c_nextk, d_prevk)
 
-                if prev_edge:
+                if prev_edge and edge_tminus1 and prev_edge_tminus1:
                     q0 = prev_edge.q0()
                     q1 = edge.q0()
+                    q1_tminus1 = edge_tminus1.q0()
+                    q_a = prev_edge_tminus1.q_a_next(q1_tminus1)
+                    p_a = prev_edge_tminus1.p_a_next(q1_tminus1)
 
                     if not e in output:
                         output[e] = []
@@ -78,7 +81,6 @@ class Simulation:
 
                     d_prevk = prev_edge.d()
 
-                edge = Edge(self.tau, v0, p_m, self.m, q_a, c, c_nextk, d_prevk)
                 c_nextk = edge.c
 
                 edges_data.append(edge) #= np.append(edges_data, edge)

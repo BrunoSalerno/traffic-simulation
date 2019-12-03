@@ -11,8 +11,9 @@ if __name__ == '__main__':
     edges = 5
     m = 3
     tau = 1
+    n_iters = 30
 
-    sim = Simulation(edges, m, tau)
+    sim = Simulation(edges, m, tau, n_iters)
     output = sim.run()
 
     print(output)
