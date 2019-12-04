@@ -14,10 +14,12 @@ class Edge:
         return 1/(self.v0 * self.tau + 1 / self.p_m)
 
     def q_e(self, p):
-        if p <= self.pc():
+        pc = self.pc() / self.m
+        p_m = self.p_m / self.m
+        if p <= pc:
             return self.v0 * p
-        elif p > self.pc() and p <= self.p_m:
-            return 1/self.tau * (1 - p/self.p_m)
+        elif p > pc and p <= p_m:
+            return 1/self.tau * (1 - p/p_m)
         else:
             return 0
 
