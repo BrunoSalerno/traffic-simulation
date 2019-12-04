@@ -55,7 +55,6 @@ class Simulation:
         v0 = 40.0
         p_m = 100.0
         c = 3000.0
-        d_prevk = 3000.0
 
         p_a = 40
         q_a = 3000
@@ -63,18 +62,25 @@ class Simulation:
         output = {}
 
         iterations = []
+
+        #p_as = [40,43,39,40,40,43,37,50,40,43,39,40,40,43,37,50]
+        dprevs = [3348, 2952, 3204, 3036, 3168, 3348, 2952, 3204, 3036, 3168, 3348, 2952, 3204, 3036, 3168]
+
         for i in range(self.n_iters):
             edges_data = []
             for e in range(self.edges):
                 if e == 0:
+                    #p_a = p_as[i]
                     p_a = 40
-    
+                    d_prevk = dprevs[i]
+
                 prev_edge = edges_data[-1] if e > 0 else None
                 edge_tminus1 = iterations[-1][e] if i > 0 else None 
                 prev_edge_tminus1 = iterations[-1][e-1] if i > 0 and e > 0 else None
 
                 edge = Edge(self.tau, v0, p_a, p_m, self.m, q_a, c, c, d_prevk)
 
+                print(i, d_prevk)
                 if prev_edge and edge_tminus1:
                     q0 = prev_edge.q0()
                     q1 = edge.q0()
