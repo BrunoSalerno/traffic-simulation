@@ -1,14 +1,19 @@
 class Edge:
-    def __init__(self, tau, v0, p_a, p_m, m, q_a, c, c_nextk, d_prevk):
+    def __init__(self, tau, v0, p_a, p_m, m, q_a, d_prevk):
         self.tau = tau
         self.v0 = v0
         self.p_a = p_a
         self.p_m = p_m
         self.m = m
         self.q_a = q_a
-        self.c = c
-        self.c_nextk = c_nextk
         self.d_prevk = d_prevk
+
+    def c(self):
+        return self.pc() * self.v0
+
+    def c_nextk(self):
+        # HACK: next capacity = current capacity
+        return self.c()
 
     def pc(self):
         return 1/(self.v0 * self.tau + 1 / self.p_m)
@@ -24,16 +29,16 @@ class Edge:
             return 0
 
     def s(self):
-        if self.q_a > self.pc():
+        if self.p_a > self.pc():
             return self.q_a
         else:
-            return self.c_nextk
+            return self.c_nextk()
 
     def d(self):
-        if self.q_a <= self.pc():
+        if self.p_a <= self.pc():
             return self.q_a
         else:
-            return self.c
+            return self.c()
 
     def q0(self):
         return min(self.d_prevk,self.s())
@@ -54,7 +59,6 @@ class Simulation:
     def run(self):
         v0 = 40.0
         p_m = 100.0
-        c = 3000.0
 
         p_a = 40
         q_a = 3000
@@ -78,7 +82,10 @@ class Simulation:
                 edge_tminus1 = iterations[-1][e] if i > 0 else None 
                 prev_edge_tminus1 = iterations[-1][e-1] if i > 0 and e > 0 else None
 
-                edge = Edge(self.tau, v0, p_a, p_m, self.m, q_a, c, c, d_prevk)
+                edge = Edge(self.tau, v0, p_a, p_m, self.m, q_a, d_prevk)
+
+                if e == 0:
+                    print({'p_c': edge.pc(), 'p_a':p_a,'q0':edge.q0(),'d': edge.d(), 's': edge.s(), 'q_a':q_a, 'p_m':p_m})
 
                 print(i, d_prevk)
                 if prev_edge and edge_tminus1:
@@ -88,7 +95,7 @@ class Simulation:
                     next_q_a = prev_edge_tminus1.q_a_next(q1_tminus1)
                     if next_q_a > 0:
                         q_a = next_q_a
-                    
+
                     p_a = prev_edge_tminus1.p_a_next(q1_tminus1)
 
                     if not e in output:
