@@ -26,7 +26,7 @@ if __name__ == '__main__':
     tau = 0.5 / 3600
     n_iters = 30
     delta_t = 10 / 3600 # 10 s
-    delta_x = 0.1 # 100 m
+    delta_x = 0.5 # 100 m
     sim = Simulation(edges, m, tau, n_iters, delta_t, delta_x)
     output = sim.run()
 
