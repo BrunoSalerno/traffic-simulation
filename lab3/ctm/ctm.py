@@ -21,14 +21,10 @@ class Edge:
         p_m = self.p_m / self.m
         if p <= pc:
             return self.v0 * p
-        else:
-            return 1/self.tau * (1 - p/p_m)
-        '''
         elif p > pc and p <= p_m:
             return 1/self.tau * (1 - p/p_m)
         else:
             return 0
-        '''
 
     def s(self):
         if self.p_a > self.pc():
@@ -97,13 +93,6 @@ class Simulation:
                     q1 = edge.q0()
                     q1_tminus1 = edge_tminus1.q0()
                     q_a = prev_edge_tminus1.q_a_next(q1_tminus1)
-
-                    '''
-                    next_q_a = prev_edge_tminus1.q_a_next(q1_tminus1)
-                    if next_q_a > 0:
-                        q_a = next_q_a
-                    '''
-
                     p_a = prev_edge_tminus1.p_a_next(q1_tminus1)
 
                     if not e in output:
