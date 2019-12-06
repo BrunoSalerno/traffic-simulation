@@ -21,9 +21,9 @@ def plot_interval(interval, data, var):
 
 
 if __name__ == '__main__':
-    edges = 10
+    edges = 5
     m = 3.0
-    tau = 0.001
+    tau = 0.5 / 3600
     n_iters = 30
     delta_t = 10 / 3600 # 10 s
     delta_x = 0.1 # 100 m
