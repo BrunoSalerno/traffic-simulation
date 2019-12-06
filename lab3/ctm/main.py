@@ -13,7 +13,7 @@ def plot_intervals(data, var, edges=None):
             ys = [e[var] for e in data[edge_i]][0:]
             print('edge {}'.format(edge_i), var,ys)
             plt.plot(ys, label='{} edge {}'.format(var, edge_i))
-        
+
 
 def plot_interval(interval, data, var):
     ys =  [data[edge][interval][var] for edge in data]
@@ -26,22 +26,27 @@ if __name__ == '__main__':
     tau = 0.5 / 3600
     n_iters = 30
     delta_t = 10 / 3600 # 10 s
-    delta_x = 0.5 # 100 m
+    delta_x = 0.5 # 500 m
+
+    # Rule:
+    # delta_t < delta_x / v0
+    # Treiber et al 2013, p. 100
+
     sim = Simulation(edges, m, tau, n_iters, delta_t, delta_x)
     output = sim.run()
 
-    print(output)
-
-    #plot_intervals(output,'q0')
-    plot_intervals(output,'q_a',[2])
+    plot_intervals(output,'q0')
+    plot_intervals(output,'q1')
     #plot_intervals(output,'p_a')
     #plot_intervals(output,'q_a')
     #plot_intervals(output,'s')
     #plot_intervals(output,'d')
     #for i in range(n_iters-1):
-    #plot_interval(5, output, 'q0')
-    #plot_interval(6, output, 'q0') 
-    #plot_interval(7, output, 'q0') 
+    #plot_interval(5, output, 'q_a')
+    #plot_interval(5, output, 'q1')
+    #plot_interval(6, output, 'q0')
+    #plot_interval(6, output, 'q1')
+    #plot_interval(7, output, 'q0')
     plt.legend()
     plt.show()
 
