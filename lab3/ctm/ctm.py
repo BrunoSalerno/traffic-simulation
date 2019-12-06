@@ -69,7 +69,7 @@ class Simulation:
             edges_data = []
             for e in range(self.edges):
                 prev_edge = edges_data[-1] if e > 0 else None
-                edge_tminus1 = iterations[-1][e] if i > 0 else None 
+                edge_tminus1 = iterations[-1][e] if i > 0 else None
                 prev_edge_tminus1 = iterations[-1][e-1] if i > 0 and e > 0 else None
 
                 if e == 0:
@@ -96,7 +96,7 @@ class Simulation:
                         output[e] = []
                     output[e].append({'p_a':p_a,'q0':q0,'q1':q1,'d': prev_edge.d(), 's': prev_edge.s(), 'q_a':q_a})
 
-                edges_data.append(edge) #= np.append(edges_data, edge)
-            iterations.append(edges_data)# = np.append(iterations, edges_data)
+                edges_data.append(edge)
+            iterations.append(edges_data)
 
         return output
