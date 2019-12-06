@@ -74,20 +74,21 @@ class Simulation:
         for i in range(self.n_iters):
             edges_data = []
             for e in range(self.edges):
-                if e == 0:
-                    p_a = 40
-                    d_prevk = 3000
 
                 prev_edge = edges_data[-1] if e > 0 else None
                 edge_tminus1 = iterations[-1][e] if i > 0 else None 
                 prev_edge_tminus1 = iterations[-1][e-1] if i > 0 and e > 0 else None
 
+                if e == 0:
+                    d_prevk = 3000
+                    if edge_tminus1:
+                        edge_tminus1_nextk = iterations[-1][1]
+                        p_a = edge_tminus1.p_a_next(edge_tminus1_nextk.q0())
+
                 edge = Edge(self.tau, v0, p_a, p_m, self.m, q_a, d_prevk, self.delta_t, self.delta_x)
 
-                if e == 0:
-                    print({'p_c': edge.pc(), 'p_a':p_a,'q0':edge.q0(),'d': edge.d(), 's': edge.s(), 'q_a':q_a, 'p_m':p_m})
+                print('int', i, 'edge',e,{'p_c': edge.pc(), 'p_a':p_a,'q0':edge.q0(),'d': edge.d(), 's': edge.s(), 'q_a':q_a, 'p_a':p_a})
 
-                print(i, d_prevk)
                 if prev_edge and edge_tminus1:
                     q0 = prev_edge.q0()
                     q1 = edge.q0()
