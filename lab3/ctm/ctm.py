@@ -13,10 +13,6 @@ class Edge:
     def c(self):
         return self.pc() * self.v0
 
-    def c_nextk(self):
-        # HACK: next capacity = current capacity
-        return self.c()
-
     def pc(self):
         return 1/(self.v0 * self.tau + 1 / self.p_m)
 
@@ -34,7 +30,7 @@ class Edge:
         if self.p_a > self.pc():
             return self.q_a
         else:
-            return self.c_nextk()
+            return self.c()
 
     def d(self):
         if self.p_a <= self.pc():
@@ -85,6 +81,9 @@ class Simulation:
                         edge_tminus1_nextk = iterations[-1][1]
                         p_a = edge_tminus1.p_a_next(edge_tminus1_nextk.q0())
 
+                if prev_edge:
+                    d_prevk = prev_edge.d()
+
                 edge = Edge(self.tau, v0, p_a, p_m, self.m, q_a, d_prevk, self.delta_t, self.delta_x)
 
                 print('int', i, 'edge',e,{'p_c': edge.pc(), 'p_a':p_a,'q0':edge.q0(),'d': edge.d(), 's': edge.s(), 'q_a':q_a, 'p_a':p_a})
@@ -103,7 +102,6 @@ class Simulation:
                         output[e] = []
                     output[e].append({'p_a':p_a,'q0':q0,'q1':q1,'d': prev_edge.d(), 's': prev_edge.s(), 'q_a':q_a})
 
-                    d_prevk = prev_edge.d()
 
                 edges_data.append(edge) #= np.append(edges_data, edge)
             iterations.append(edges_data)# = np.append(iterations, edges_data)
