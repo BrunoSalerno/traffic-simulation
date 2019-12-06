@@ -17,23 +17,22 @@ class Edge:
         return 1/(self.v0 * self.tau + 1 / self.p_m)
 
     def q_e(self, p):
-        pc = self.pc() / self.m
         p_m = self.p_m / self.m
-        if p <= pc:
+        if p <= self.pc():
             return self.v0 * p
-        elif p > pc and p <= p_m:
+        elif p > self.pc() and p <= p_m:
             return 1/self.tau * (1 - p/p_m)
         else:
             return 0
 
     def s(self):
-        if self.p_a > self.pc():
+        if self.p_a > (self.pc() * self.m):
             return self.q_a
         else:
             return self.c()
 
     def d(self):
-        if self.p_a <= self.pc():
+        if self.p_a <= (self.pc() * self.m):
             return self.q_a
         else:
             return self.c()
@@ -70,7 +69,6 @@ class Simulation:
         for i in range(self.n_iters):
             edges_data = []
             for e in range(self.edges):
-
                 prev_edge = edges_data[-1] if e > 0 else None
                 edge_tminus1 = iterations[-1][e] if i > 0 else None 
                 prev_edge_tminus1 = iterations[-1][e-1] if i > 0 and e > 0 else None
@@ -86,14 +84,14 @@ class Simulation:
 
                 edge = Edge(self.tau, v0, p_a, p_m, self.m, q_a, d_prevk, self.delta_t, self.delta_x)
 
-                print('int', i, 'edge',e,{'p_c': edge.pc(), 'p_a':p_a,'q0':edge.q0(),'d': edge.d(), 's': edge.s(), 'q_a':q_a, 'p_a':p_a})
-
                 if prev_edge and edge_tminus1:
                     q0 = prev_edge.q0()
                     q1 = edge.q0()
                     q1_tminus1 = edge_tminus1.q0()
                     q_a = prev_edge_tminus1.q_a_next(q1_tminus1)
                     p_a = prev_edge_tminus1.p_a_next(q1_tminus1)
+
+                    print('int',i,'edge',e,'q0:',q0,'q1:',q1)
 
                     if not e in output:
                         output[e] = []
