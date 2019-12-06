@@ -27,18 +27,21 @@ if __name__ == '__main__':
     n_iters = 30
     delta_t = 10 / 3600 # 10 s
     delta_x = 0.5 # 500 m
+    v0 = 50.0
+    p_m = 120.0
+
+    p_a0 = 40
+    q_a0 = 3000
 
     # Rule:
     # delta_t < delta_x / v0
     # Treiber et al 2013, p. 100
 
-    sim = Simulation(edges, m, tau, n_iters, delta_t, delta_x)
-    output = sim.run()
+    sim = Simulation(edges, m, tau, n_iters, delta_t, delta_x, v0, p_m)
+    output = sim.run(p_a0, q_a0)
 
-    plot_intervals(output,'q0')
-    plot_intervals(output,'q1')
     #plot_intervals(output,'p_a')
-    #plot_intervals(output,'q_a')
+    plot_intervals(output,'q_a')
     #plot_intervals(output,'s')
     #plot_intervals(output,'d')
     #for i in range(n_iters-1):
