@@ -21,13 +21,13 @@ def plot_interval(interval, data, var):
 
 
 if __name__ == '__main__':
-    edges = 5
+    edges = 10
     m = 3.0
     tau = 0.001
-    #n_iters = 30
-    n_iters = 15
-
-    sim = Simulation(edges, m, tau, n_iters)
+    n_iters = 30
+    delta_t = 10 / 3600 # 10 s
+    delta_x = 0.1 # 100 m
+    sim = Simulation(edges, m, tau, n_iters, delta_t, delta_x)
     output = sim.run()
 
     print(output)

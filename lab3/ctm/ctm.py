@@ -1,5 +1,5 @@
 class Edge:
-    def __init__(self, tau, v0, p_a, p_m, m, q_a, d_prevk):
+    def __init__(self, tau, v0, p_a, p_m, m, q_a, d_prevk, delta_t, delta_x):
         self.tau = tau
         self.v0 = v0
         self.p_a = p_a
@@ -7,6 +7,8 @@ class Edge:
         self.m = m
         self.q_a = q_a
         self.d_prevk = d_prevk
+        self.delta_t = delta_t
+        self.delta_x = delta_x
 
     def c(self):
         return self.pc() * self.v0
@@ -43,22 +45,24 @@ class Edge:
     def q0(self):
         return min(self.d_prevk,self.s())
 
-    def p_a_next(self, q1, delta_x = 1, delta_t = 5.0 / 60):
-        return self.p_a + 1/delta_x * (self.q0() - q1) * delta_t
+    def p_a_next(self, q1):
+        return self.p_a + 1/self.delta_x * (self.q0() - q1) * self.delta_t
 
     def q_a_next(self, q1):
         return self.m * self.q_e(self.p_a_next(q1)/self.m)
 
 class Simulation:
-    def __init__(self, edges, m, tau, n_iters):
+    def __init__(self, edges, m, tau, n_iters, delta_t, delta_x):
         self.edges = edges
         self.m = m
         self.tau = tau
         self.n_iters = n_iters
+        self.delta_t = delta_t
+        self.delta_x = delta_x
 
     def run(self):
-        v0 = 40.0
-        p_m = 100.0
+        v0 = 50.0
+        p_m = 120.0
 
         p_a = 40
         q_a = 3000
@@ -67,22 +71,18 @@ class Simulation:
 
         iterations = []
 
-        #p_as = [40,43,39,40,40,43,37,50,40,43,39,40,40,43,37,50]
-        dprevs = [3348, 2952, 3204, 3036, 3168, 3348, 2952, 3204, 3036, 3168, 3348, 2952, 3204, 3036, 3168]
-
         for i in range(self.n_iters):
             edges_data = []
             for e in range(self.edges):
                 if e == 0:
-                    #p_a = p_as[i]
                     p_a = 40
-                    d_prevk = dprevs[i]
+                    d_prevk = 3000
 
                 prev_edge = edges_data[-1] if e > 0 else None
                 edge_tminus1 = iterations[-1][e] if i > 0 else None 
                 prev_edge_tminus1 = iterations[-1][e-1] if i > 0 and e > 0 else None
 
-                edge = Edge(self.tau, v0, p_a, p_m, self.m, q_a, d_prevk)
+                edge = Edge(self.tau, v0, p_a, p_m, self.m, q_a, d_prevk, self.delta_t, self.delta_x)
 
                 if e == 0:
                     print({'p_c': edge.pc(), 'p_a':p_a,'q0':edge.q0(),'d': edge.d(), 's': edge.s(), 'q_a':q_a, 'p_m':p_m})
