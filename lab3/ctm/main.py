@@ -1,5 +1,5 @@
-import matplotlib
-matplotlib.use('TkAgg')
+#import matplotlib
+#matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
 import numpy as np
@@ -24,20 +24,21 @@ if __name__ == '__main__':
     edges = 5
     m = 3.0
     tau = 0.5 / 3600
-    n_iters = 30
+    n_iters = 60
     delta_t = 10 / 3600 # 10 s
     delta_x = 0.5 # 500 m
     v0 = 50.0
     p_m = 120.0
 
     p_a0 = 40
-    q_a0 = 3000
+    q_a0 = p_a0 * v0
 
     # Rule:
     # delta_t < delta_x / v0
     # Treiber et al 2013, p. 100
 
     sim = Simulation(edges, m, tau, n_iters, delta_t, delta_x, v0, p_m)
+    sim.add_bottleneck(4, 55)
     output = sim.run(p_a0, q_a0)
 
     #plot_intervals(output,'p_a')
