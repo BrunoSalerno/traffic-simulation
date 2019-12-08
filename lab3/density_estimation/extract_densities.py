@@ -91,13 +91,13 @@ if __name__ == "__main__":
     left = np.array(vals['il1_end']['flow'])+np.array(vals['il2_end']['flow']) +np.array(vals['il3_end']['flow'])
     deltas_q = entered - left
 
-    dens = densities(traci_densities[0], deltas_q)
+    dens = densities(sumo_densities[0], deltas_q)
 
     entered_quant = np.array(vals['il1_start']['nVehContrib'])+np.array(vals['il2_start']['nVehContrib']) +np.array(vals['il3_start']['nVehContrib'])
     left_quant = np.array(vals['il1_end']['nVehContrib'])+np.array(vals['il2_end']['nVehContrib']) +np.array(vals['il3_end']['nVehContrib'])
     deltas_quant = entered_quant - left_quant
 
-    dens_naive = densities_naive(traci_densities[0],deltas_quant)
+    dens_naive = densities_naive(sumo_densities[0],deltas_quant)
 
     minutes = np.array(range(len(dens))) * 5 + 15
     plt.plot(minutes,dens, label='Density conservation law')
