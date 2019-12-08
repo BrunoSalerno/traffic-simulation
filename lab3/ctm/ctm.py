@@ -1,3 +1,5 @@
+import random
+
 class Edge:
     def __init__(self, tau, v0, p_a, p_m, m, q_a, d_prevk, delta_t, delta_x):
         self.tau = tau
@@ -69,10 +71,12 @@ class Simulation:
         else:
             return None
 
-    def run(self, p_a0, q_a0):
+    def run(self, p_a0, q_a0, random_q0 = None):
+        '''
         p_a = p_a0
         q_a = q_a0
         d_prevk = q_a0
+        '''
 
         output = {}
         iterations = []
@@ -86,9 +90,16 @@ class Simulation:
 
                 if e == 0:
                     d_prevk = q_a0
+                    q_a = q_a0
+                    if random_q0:
+                        d_prevk += random.randint(random_q0[0], random_q0[1])
+                    p_a = d_prevk / self.v0
+                    '''
                     if edge_tminus1:
                         edge_tminus1_nextk = iterations[-1][1]
                         p_a = edge_tminus1.p_a_next(edge_tminus1_nextk.q0())
+                        q_a = edge_tminus1.q_a_next(edge_tminus1_nextk.q0())
+                    '''
 
                 ## Bottleneck ############################
                 bottleneck_p_m = self.bottleneck_p_m_if_exist(e)

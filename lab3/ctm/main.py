@@ -38,11 +38,11 @@ if __name__ == '__main__':
     # Treiber et al 2013, p. 100
 
     sim = Simulation(edges, m, tau, n_iters, delta_t, delta_x, v0, p_m)
-    sim.add_bottleneck(4, 55)
-    output = sim.run(p_a0, q_a0)
+    sim.add_bottleneck(4, 45)
+    output = sim.run(p_a0, q_a0, random_q0=[-5,5])
 
-    #plot_intervals(output,'p_a')
-    plot_intervals(output,'q_a')
+    plot_intervals(output,'p_a',[1,2,3,4,5])
+    #plot_intervals(output,'q_a')
     #plot_intervals(output,'s')
     #plot_intervals(output,'d')
     #for i in range(n_iters-1):
