@@ -44,20 +44,20 @@ def greenshield(vals):
     r2 = sklearn.metrics.r2_score(vals['speed'], y_predicted)
     return x,y,r2
 
-def _greenberg_func(p, pj):
-    v0 = 70
+def _greenberg_func(p, pj, v0):
     return v0 * np.log(pj/p)
 
 def greenberg(vals):
-    popt, pconv = scipy.optimize.curve_fit(_greenberg_func, vals['density'], vals['speed'])
-    pj = popt[0]
-    x = np.linspace(50,350)
-    y = _greenberg_func(x, pj)
+    # Initial guess: v0 = 70km, and kj = 200 veh/km
+    popt, pconv = scipy.optimize.curve_fit(_greenberg_func, vals['density'], vals['speed'], p0 =[200,70])
+    pj, v0 = popt
+    x = np.linspace(10,350)
+    y = _greenberg_func(x, pj, v0)
 
-    print('Greenberg: pj: {}'.format(pj))
+    print('Greenberg: pj: {}, v0: {}'.format(pj, v0))
 
     # Equal to y, but only for the actual speeds of x
-    y_predicted = _greenberg_func(np.array(vals['density']), pj)
+    y_predicted = _greenberg_func(np.array(vals['density']), pj, v0)
     r2 = sklearn.metrics.r2_score(vals['speed'], y_predicted)
 
     return x, y, r2
@@ -81,8 +81,8 @@ if __name__ == "__main__":
     x,y,r2 = greenshield(vals)
     plt.plot(x, y, label='Greenshields R2: {}'.format(round(r2,2)))
 
-    #x,y,r2 = greenberg(vals)
-    #plt.plot(x, y, label='Greenberg R2: {}'.format(round(r2,2)))
+    x,y,r2 = greenberg(vals)
+    plt.plot(x, y, label='Greenberg R2: {}'.format(round(r2,2)))
 
     plt.axis(xmin=0,ymin=0)
     plt.xlabel('Density (#veh/km)')
