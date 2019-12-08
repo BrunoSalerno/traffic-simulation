@@ -4,14 +4,6 @@ Created on Monday, November 4th 2019
 """
 # Importing modules/Libraries
 import os, subprocess, sys, math, random
-import numpy as np
-
-import matplotlib
-matplotlib.use('TkAgg')
-
-import matplotlib.pyplot as plt
-
-import pandas as pd
 
 # Defining SUMO path and importing traci module
 # the path can be declared manually in the operating system (https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.html)
@@ -35,68 +27,15 @@ Simulation example in the following section, update the written code according t
 number_runs = 1  # number of simulation repetitions
 last_simulation_step = 16500
 
-all_speeds = []
-all_variances = []
-all_cum_variances = []
-all_departed = []
-
-all_link_speeds = {}
-
 print ("TOTAL RUNS {}".format(number_runs))
 
 for runs in range(number_runs):
     print ("Simulation Run Number {} has started".format(runs + 1))
     i = 1
-    counter = 0
 
-    sim_speeds = []
-    departed = 0
-    link_speeds = {
-            'link1':[],
-            'link2':[],
-            'link3':[],
-            'link4':[],
-            'link5':[]
-            }
     while i < last_simulation_step:
         traci.simulationStep()
-
-        departed += traci.simulation.getDepartedNumber()
-
-        if i % 10 == 0:
-            counter += 1
-
-            # Warm-up check (15 min threshold)
-            if counter > 15:
-                for link in link_speeds:
-                    link_mean_speed = traci.edge.getLastStepMeanSpeed(link)
-                    link_speeds[link].append(link_mean_speed)
-                
-                vehicles_ids = traci.vehicle.getIDList()
-                speeds = []
-                for vid in vehicles_ids:
-                    speeds.append(traci.vehicle.getSpeed(vid))
-
-                speed = np.mean(speeds)
-                var   = np.var(speeds)
-                sim_speeds.append(speed)
         i += 1
-    
-    mean_speed = np.mean(sim_speeds)
-    var_speed = np.var(sim_speeds)
-
-    all_departed.append(departed)
-    all_speeds.append(mean_speed)
-    all_variances.append(var_speed)
-    all_cum_variances.append(np.var(all_speeds))
-
-    for link in link_speeds:
-        if not link in all_link_speeds:
-            all_link_speeds[link] = []
-        all_link_speeds[link].append(np.mean(link_speeds[link]))
-
-    print ("Simulation Run Number {} has ended".format(runs + 1))
-
     #traci.load(["-c", conf_file, "--random"])  # reloading simulation for the next run, with a random seed
 
 traci.close()  # closing simulation
