@@ -16,7 +16,7 @@ class Edge:
         return self.pc() * self.v0
 
     def pc(self):
-        return 1/(self.v0 * self.tau + 1 / self.p_m)
+        return 1/(self.v0 * self.tau + (1 / self.p_m))
 
     def q_e(self, p):
         p_m = self.p_m / self.m
