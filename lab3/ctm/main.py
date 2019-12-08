@@ -51,6 +51,9 @@ if __name__ == '__main__':
     #plot_interval(6, output, 'q0')
     #plot_interval(6, output, 'q1')
     #plot_interval(7, output, 'q0')
+
+    plt.ylabel('Density (#veh/km)')
+    plt.xlabel('Iteration')
     plt.legend()
     plt.show()
 
