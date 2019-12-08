@@ -32,7 +32,7 @@ def greenshield(vals):
     # a = vf
     # b1 = - vf/pj
     b1, a= np.polyfit(vals['density'], vals['speed'], 1)
-    x = np.linspace(min(vals['density']),max(vals['density']))
+    x = np.linspace(0,-a/b1)
     y = a + b1 * x
 
     # Equal to y, but only for the actual speeds of x
@@ -58,6 +58,7 @@ if __name__ == "__main__":
 
     x,y,r2 = greenshield(vals)
     plt.plot(x, y, color='black', label='Greenshield R2: {}'.format(round(r2,2)))
+    plt.axis(xmin=0,ymin=0)
 
     plt.xlabel('Density (#veh/km)')
     plt.ylabel('Speed (m/s)')
