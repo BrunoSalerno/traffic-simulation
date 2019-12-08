@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Sun Dec  8 19:16:29 2019 by Eclipse SUMO netconvert Version 93b75bff
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <node-files value="nodes.xml"/>
+        <edge-files value="edges.xml"/>
+        <type-files value="types.xml"/>
+    </input>
+
+    <output>
+        <output-file value="network.xml"/>
+    </output>
+
+</configuration>
+-->
+
+<net version="1.3" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,2500.00,0.00" origBoundary="0.00,0.00,2500.00,0.00" projParameter="!"/>
+
+    <type id="70kmh" numLanes="1" speed="19.44"/>
+
+    <edge id=":nd2_0" function="internal">
+        <lane id=":nd2_0_0" index="0" speed="19.44" length="0.10" shape="500.00,-1.60 500.00,-1.60"/>
+    </edge>
+    <edge id=":nd3_0" function="internal">
+        <lane id=":nd3_0_0" index="0" speed="19.44" length="0.10" shape="1000.00,-1.60 1000.00,-1.60"/>
+    </edge>
+    <edge id=":nd4_0" function="internal">
+        <lane id=":nd4_0_0" index="0" speed="19.44" length="0.10" shape="1500.00,-1.60 1500.00,-1.60"/>
+    </edge>
+    <edge id=":nd5_0" function="internal">
+        <lane id=":nd5_0_0" index="0" speed="19.44" length="0.10" shape="2000.00,-1.60 2000.00,-1.60"/>
+    </edge>
+
+    <edge id="link1" from="nd1" to="nd2" priority="-1" type="70kmh">
+        <lane id="link1_0" index="0" speed="19.44" length="500.00" shape="0.00,-1.60 500.00,-1.60"/>
+    </edge>
+    <edge id="link2" from="nd2" to="nd3" priority="-1" type="70kmh">
+        <lane id="link2_0" index="0" speed="19.44" length="500.00" shape="500.00,-1.60 1000.00,-1.60"/>
+    </edge>
+    <edge id="link3" from="nd3" to="nd4" priority="-1" type="70kmh">
+        <lane id="link3_0" index="0" speed="19.44" length="500.00" shape="1000.00,-1.60 1500.00,-1.60"/>
+    </edge>
+    <edge id="link4" from="nd4" to="nd5" priority="-1" type="70kmh">
+        <lane id="link4_0" index="0" speed="19.44" length="500.00" shape="1500.00,-1.60 2000.00,-1.60"/>
+    </edge>
+    <edge id="link5" from="nd5" to="nd6" priority="-1" type="70kmh">
+        <lane id="link5_0" index="0" speed="19.44" length="500.00" shape="2000.00,-1.60 2500.00,-1.60"/>
+    </edge>
+
+    <junction id="nd1" type="dead_end" x="0.00" y="0.00" incLanes="" intLanes="" shape="0.00,0.00 0.00,-3.20"/>
+    <junction id="nd2" type="priority" x="500.00" y="0.00" incLanes="link1_0" intLanes=":nd2_0_0" shape="500.00,0.00 500.00,-3.20 500.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="nd3" type="priority" x="1000.00" y="0.00" incLanes="link2_0" intLanes=":nd3_0_0" shape="1000.00,0.00 1000.00,-3.20 1000.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="nd4" type="priority" x="1500.00" y="0.00" incLanes="link3_0" intLanes=":nd4_0_0" shape="1500.00,0.00 1500.00,-3.20 1500.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="nd5" type="priority" x="2000.00" y="0.00" incLanes="link4_0" intLanes=":nd5_0_0" shape="2000.00,0.00 2000.00,-3.20 2000.00,0.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="nd6" type="dead_end" x="2500.00" y="0.00" incLanes="link5_0" intLanes="" shape="2500.00,-3.20 2500.00,0.00"/>
+
+    <connection from="link1" to="link2" fromLane="0" toLane="0" via=":nd2_0_0" dir="s" state="M"/>
+    <connection from="link2" to="link3" fromLane="0" toLane="0" via=":nd3_0_0" dir="s" state="M"/>
+    <connection from="link3" to="link4" fromLane="0" toLane="0" via=":nd4_0_0" dir="s" state="M"/>
+    <connection from="link4" to="link5" fromLane="0" toLane="0" via=":nd5_0_0" dir="s" state="M"/>
+
+    <connection from=":nd2_0" to="link2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":nd3_0" to="link3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":nd4_0" to="link4" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":nd5_0" to="link5" fromLane="0" toLane="0" dir="s" state="M"/>
+
+</net>

@@ -1,0 +1,7 @@
+<edges>
+<edge from="nd1" to="nd2" id="link1" type="70kmh"/>
+<edge from="nd2" to="nd3" id="link2" type="70kmh"/>
+<edge from="nd3" to="nd4" id="link3" type="70kmh"/>
+<edge from="nd4" to="nd5" id="link4" type="70kmh"/>
+<edge from="nd5" to="nd6" id="link5" type="70kmh"/>
+</edges>
