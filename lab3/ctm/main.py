@@ -39,7 +39,7 @@ if __name__ == '__main__':
 
     sim = Simulation(edges, m, tau, n_iters, delta_t, delta_x, v0, p_m)
     sim.add_bottleneck(4, 45)
-    output = sim.run(p_a0, q_a0, random_q0=[-5,5])
+    output = sim.run(p_a0, q_a0, random_q0=[-10,10])
 
     plot_intervals(output,'p_a',[1,2,3,4,5])
     #plot_intervals(output,'q_a')

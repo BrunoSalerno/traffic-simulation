@@ -89,11 +89,11 @@ class Simulation:
                 prev_edge_tminus1 = iterations[-1][e-1] if i > 0 and e > 0 else None
 
                 if e == 0:
-                    d_prevk = q_a0
                     q_a = q_a0
                     if random_q0:
-                        d_prevk += random.randint(random_q0[0], random_q0[1])
-                    p_a = d_prevk / self.v0
+                        q_a += random.randint(random_q0[0], random_q0[1])
+                    d_prevk = q_a
+                    p_a = q_a / self.v0
                     '''
                     if edge_tminus1:
                         edge_tminus1_nextk = iterations[-1][1]
