@@ -24,7 +24,7 @@ def fetch_edge_attrs(data, edge_id, attrs):
     return values
 
 def greenshield(vals):
-    # The fit is a linear model, following Greenshields
+    # This is a linear model, following Greenshields
     # y(x) = a + b1.x
     # and
     # v(p) = vf(1 - p/pj)
@@ -38,7 +38,7 @@ def greenshield(vals):
 
     print('Greenshield: a: {} b1: {}'.format(a, b1))
 
-    # Equal to y, but only for the actual speeds of x
+    # Equal to y, but only for the actual densities of x
     y_predicted = a + b1 * np.array(vals['density'])
 
     r2 = sklearn.metrics.r2_score(vals['speed'], y_predicted)
@@ -48,7 +48,7 @@ def _greenberg_func(p, pj, v0):
     return v0 * np.log(pj/p)
 
 def greenberg(vals):
-    # Initial guess: v0 = 70km, and kj = 200 veh/km
+    # Initial guess: v0 = 70km/h, and kj = 200 veh/km
     popt, pconv = scipy.optimize.curve_fit(_greenberg_func, vals['density'], vals['speed'], p0 =[200,70])
     pj, v0 = popt
     x = np.linspace(10,350)
@@ -56,7 +56,7 @@ def greenberg(vals):
 
     print('Greenberg: pj: {}, v0: {}'.format(pj, v0))
 
-    # Equal to y, but only for the actual speeds of x
+    # Equal to y, but only for the actual densities of x
     y_predicted = _greenberg_func(np.array(vals['density']), pj, v0)
     r2 = sklearn.metrics.r2_score(vals['speed'], y_predicted)
 
