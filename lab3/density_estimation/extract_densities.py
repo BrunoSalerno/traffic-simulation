@@ -69,11 +69,9 @@ def densities_naive(density_0,deltas_quant):
 
 def traci_densities():
     links_d = pd.read_csv("output/links_1runs.csv")
-    print(links_d['link4'])
-    dens = links_d['link4'].iloc[::5]
-    dens.loc[-1] = links_d['link4'].iloc[-1]
+    dens = links_d['link4']
     print(dens)
-    return dens
+    return [dens.index+15, dens]
 
 if __name__ == "__main__":
     filename = sys.argv[1]
@@ -82,8 +80,9 @@ if __name__ == "__main__":
     edgefilename = sys.argv[2]
     xml2 = ET.parse(edgefilename)
 
+    traci_xs, traci_densities = traci_densities()
+
     sumo_densities = fetch_edge_attrs(xml2.getroot(), 'link4', ['entered','left','density'])['density']
-    traci_densities = traci_densities()
 
     links = ['il1_start', 'il2_start', 'il3_start','il1_end','il2_end','il3_end']
     vals = fetch_interval_attrs(xml.getroot(), links, ['flow','nVehContrib'])
@@ -104,7 +103,7 @@ if __name__ == "__main__":
     plt.plot(minutes,dens, label='Density conservation law')
     plt.plot(minutes,dens_naive, label='Naïve density', linestyle='dashed', color='black')
     plt.plot(minutes,sumo_densities, label='SUMO edge density')
-    plt.plot(minutes,traci_densities, label='SUMO tracy density')
+    plt.plot(traci_xs,traci_densities, label='SUMO tracy density')
 
     plt.ylabel('Density (#veh/km)')
     plt.xlabel('Minutes')
