@@ -28,4 +28,6 @@ if __name__ == '__main__':
     print(df)
 
     df.plot()
+    plt.ylabel('Density (#veh/km)')
+    plt.xlabel('Iteration')
     plt.show()
