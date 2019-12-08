@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import xml.etree.ElementTree as ET
 import sys
 import numpy as np
+import pandas as pd
 
 def fetch_edge_attrs(data, edge_id, attrs):
     values = {}
@@ -66,6 +67,14 @@ def densities_naive(density_0,deltas_quant):
 
     return res
 
+def traci_densities():
+    links_d = pd.read_csv("output/links_1runs.csv")
+    print(links_d['link4'])
+    dens = links_d['link4'].iloc[::5]
+    dens.loc[-1] = links_d['link4'].iloc[-1]
+    print(dens)
+    return dens
+
 if __name__ == "__main__":
     filename = sys.argv[1]
     xml = ET.parse(filename)
@@ -74,26 +83,28 @@ if __name__ == "__main__":
     xml2 = ET.parse(edgefilename)
 
     sumo_densities = fetch_edge_attrs(xml2.getroot(), 'link4', ['entered','left','density'])['density']
+    traci_densities = traci_densities()
 
     links = ['il1_start', 'il2_start', 'il3_start','il1_end','il2_end','il3_end']
-    vals = fetch_interval_attrs(xml.getroot(), links, ['flow','nVehEntered'])
+    vals = fetch_interval_attrs(xml.getroot(), links, ['flow','nVehContrib'])
 
     entered = np.array(vals['il1_start']['flow'])+np.array(vals['il2_start']['flow']) +np.array(vals['il3_start']['flow'])
     left = np.array(vals['il1_end']['flow'])+np.array(vals['il2_end']['flow']) +np.array(vals['il3_end']['flow'])
     deltas_q = entered - left
 
-    dens = densities(sumo_densities[0], deltas_q)
+    dens = densities(traci_densities[0], deltas_q)
 
-    entered_quant = np.array(vals['il1_start']['nVehEntered'])+np.array(vals['il2_start']['nVehEntered']) +np.array(vals['il3_start']['nVehEntered'])
-    left_quant = np.array(vals['il1_end']['nVehEntered'])+np.array(vals['il2_end']['nVehEntered']) +np.array(vals['il3_end']['nVehEntered'])
+    entered_quant = np.array(vals['il1_start']['nVehContrib'])+np.array(vals['il2_start']['nVehContrib']) +np.array(vals['il3_start']['nVehContrib'])
+    left_quant = np.array(vals['il1_end']['nVehContrib'])+np.array(vals['il2_end']['nVehContrib']) +np.array(vals['il3_end']['nVehContrib'])
     deltas_quant = entered_quant - left_quant
 
-    dens_naive = densities_naive(sumo_densities[0],deltas_quant)
+    dens_naive = densities_naive(traci_densities[0],deltas_quant)
 
     minutes = np.array(range(len(dens))) * 5 + 15
-    plt.plot(minutes,dens, label='density')
-    plt.plot(minutes,sumo_densities, label='SUMO density')
-    plt.plot(minutes,dens_naive, label='Naïve density')
+    plt.plot(minutes,dens, label='Density conservation law')
+    plt.plot(minutes,dens_naive, label='Naïve density', linestyle='dashed', color='black')
+    plt.plot(minutes,sumo_densities, label='SUMO edge density')
+    plt.plot(minutes,traci_densities, label='SUMO tracy density')
 
     plt.ylabel('Density (#veh/km)')
     plt.xlabel('Minutes')

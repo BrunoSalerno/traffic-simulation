@@ -41,6 +41,7 @@ all_cum_variances = []
 all_departed = []
 
 all_link_speeds = {}
+link_veh_count = {}
 
 print ("TOTAL RUNS {}".format(number_runs))
 
@@ -58,6 +59,7 @@ for runs in range(number_runs):
             'link4':[],
             'link5':[]
             }
+
     while i < last_simulation_step:
         traci.simulationStep()
 
@@ -71,6 +73,9 @@ for runs in range(number_runs):
                 for link in link_speeds:
                     link_mean_speed = traci.edge.getLastStepMeanSpeed(link)
                     link_speeds[link].append(link_mean_speed)
+                    if not link in link_veh_count:
+                        link_veh_count[link] = []
+                    link_veh_count[link].append(traci.edge.getLastStepVehicleNumber(link))
                 
                 vehicles_ids = traci.vehicle.getIDList()
                 speeds = []
@@ -101,15 +106,7 @@ for runs in range(number_runs):
 
 traci.close()  # closing simulation
 
-data = {
-    'mean_speed': all_speeds,
-    'variance': all_variances,
-    'cum_variance': all_cum_variances,
-    'departed': all_departed
-    }
-data.update(all_link_speeds)
-
-df = pd.DataFrame(data, index=np.arange(1, number_runs + 1).tolist())
-
-#filename = "{}runs.csv".format(number_runs)
-#df.to_csv(filename)
+df = pd.DataFrame(link_veh_count)
+print(df)
+filename = "output/links_{}runs.csv".format(number_runs)
+df.to_csv(filename)
