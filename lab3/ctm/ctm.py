@@ -71,13 +71,7 @@ class Simulation:
         else:
             return None
 
-    def run(self, p_a0, q_a0, random_q0 = None):
-        '''
-        p_a = p_a0
-        q_a = q_a0
-        d_prevk = q_a0
-        '''
-
+    def run(self, p_as_for_initial_edge = [], p_as_for_initial_iter=[]):
         output = {}
         iterations = []
 
@@ -89,17 +83,13 @@ class Simulation:
                 prev_edge_tminus1 = iterations[-1][e-1] if i > 0 and e > 0 else None
 
                 if e == 0:
-                    q_a = q_a0
-                    if random_q0:
-                        q_a += random.randint(random_q0[0], random_q0[1])
+                    p_a = p_as_for_initial_edge[i]
+                    q_a = p_a * self.v0
                     d_prevk = q_a
-                    p_a = q_a / self.v0
-                    '''
-                    if edge_tminus1:
-                        edge_tminus1_nextk = iterations[-1][1]
-                        p_a = edge_tminus1.p_a_next(edge_tminus1_nextk.q0())
-                        q_a = edge_tminus1.q_a_next(edge_tminus1_nextk.q0())
-                    '''
+
+                if i == 0 and e > 0:
+                    p_a = p_as_for_initial_iter[e]
+                    q_a = p_a * self.v0
 
                 ## Bottleneck ############################
                 bottleneck_p_m = self.bottleneck_p_m_if_exist(e)
@@ -108,8 +98,6 @@ class Simulation:
                 if prev_edge:
                     d_prevk = prev_edge.d()
 
-                edge = Edge(self.tau, self.v0, p_a, bottleneck_p_m or self.p_m, self.m, q_a, d_prevk, self.delta_t, self.delta_x)
-
                 if prev_edge and edge_tminus1:
                     q0 = prev_edge.q0()
                     q1 = edge.q0()
@@ -117,11 +105,11 @@ class Simulation:
                     q_a = prev_edge_tminus1.q_a_next(q1_tminus1)
                     p_a = prev_edge_tminus1.p_a_next(q1_tminus1)
 
-                    print('int',i,'edge',e,'q0:',q0,'q1:',q1)
-
                     if not e in output:
                         output[e] = []
                     output[e].append({'p_a':p_a,'q0':q0,'q1':q1,'d': prev_edge.d(), 's': prev_edge.s(), 'q_a':q_a})
+
+                edge = Edge(self.tau, self.v0, p_a, bottleneck_p_m or self.p_m, self.m, q_a, d_prevk, self.delta_t, self.delta_x)
 
                 edges_data.append(edge)
             iterations.append(edges_data)
