@@ -27,7 +27,12 @@ if __name__ == '__main__':
     df = pd.DataFrame(densities)
     print(df)
 
-    df.plot()
+    print(list(df['link1']))
+
+    for l in df:
+        print(df[l][0])
+
+    df[0:60].plot()
     plt.ylabel('Density (#veh/km)')
     plt.xlabel('Iteration')
     plt.show()
