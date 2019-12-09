@@ -62,12 +62,16 @@ class Simulation:
 
     # To create a bottleneck in any given edge
     # we just set p_m to a low value
-    def add_bottleneck(self, edge, v0):
-        self.bottlenecks[edge]={'v0': v0}
+    def add_bottleneck(self, edge, v0, interval=None):
+        self.bottlenecks[edge]={'v0': v0, 'interval': interval}
 
-    def bottleneck_if_exist(self, edge):
+    def bottleneck_if_exist(self, edge, interval):
         if edge in self.bottlenecks:
-            return self.bottlenecks[edge]['v0']
+            bottleneck = self.bottlenecks[edge]
+            if bottleneck['interval']:
+                return bottleneck['v0'] if interval >= bottleneck['interval'] else None
+            else:
+                return bottleneck['v0']
         else:
             return None
 
@@ -92,7 +96,7 @@ class Simulation:
                     q_a = p_a * self.v0
 
                 ## Bottleneck ############################
-                bottleneck_v0 = self.bottleneck_if_exist(e)
+                bottleneck_v0 = self.bottleneck_if_exist(e, i)
                 ##########################################
 
                 if prev_edge:

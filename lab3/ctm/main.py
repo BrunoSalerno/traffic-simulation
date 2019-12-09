@@ -38,21 +38,18 @@ if __name__ == '__main__':
     p_as_iter1 = [39.66,32.73,39.56,45.7,40.50]
 
     sim = Simulation(edges, m, tau, n_iters, delta_t, delta_x, v0, p_m)
-    sim.add_bottleneck(3, 10)
+    sim.add_bottleneck(edge=2, v0=10, interval=20)
     output = sim.run(p_as_for_initial_edge = p_as_edge1, p_as_for_initial_iter=p_as_iter1)
 
-    plot_intervals(output,'p_a',[1,2,3,4,5])
-    #plot_intervals(output,'q_a')
-    #plot_intervals(output,'s')
-    #plot_intervals(output,'d')
-    #for i in range(n_iters-1):
-    #plot_interval(5, output, 'q_a')
-    #plot_interval(5, output, 'q_a')
-    #plot_interval(6, output, 'q_a')
-    #plot_interval(6, output, 'q1')
-    #plot_interval(7, output, 'q_a')
+    #plot_intervals(output,'q_a',[1,2,3,4,5])
+    #plt.ylabel('Flow (#veh/h)')
 
+    plot_intervals(output,'p_a')
     plt.ylabel('Density (#veh/km)')
+
+    #for i in range(17,23):
+    #    plot_interval(i, output, 'q_a')
+
     plt.xlabel('Iteration')
     plt.legend()
     plt.show()
