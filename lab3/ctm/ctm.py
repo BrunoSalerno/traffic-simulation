@@ -62,12 +62,12 @@ class Simulation:
 
     # To create a bottleneck in any given edge
     # we just set p_m to a low value
-    def add_bottleneck(self, edge, p_m):
-        self.bottlenecks[edge]={'p_m': p_m}
+    def add_bottleneck(self, edge, v0):
+        self.bottlenecks[edge]={'v0': v0}
 
-    def bottleneck_p_m_if_exist(self, edge):
+    def bottleneck_if_exist(self, edge):
         if edge in self.bottlenecks:
-            return self.bottlenecks[edge]['p_m']
+            return self.bottlenecks[edge]['v0']
         else:
             return None
 
@@ -92,7 +92,7 @@ class Simulation:
                     q_a = p_a * self.v0
 
                 ## Bottleneck ############################
-                bottleneck_p_m = self.bottleneck_p_m_if_exist(e)
+                bottleneck_v0 = self.bottleneck_if_exist(e)
                 ##########################################
 
                 if prev_edge:
@@ -109,7 +109,7 @@ class Simulation:
                         output[e] = []
                     output[e].append({'p_a':p_a,'q0':q0,'q1':q1,'d': prev_edge.d(), 's': prev_edge.s(), 'q_a':q_a})
 
-                edge = Edge(self.tau, self.v0, p_a, bottleneck_p_m or self.p_m, self.m, q_a, d_prevk, self.delta_t, self.delta_x)
+                edge = Edge(self.tau, bottleneck_v0 or self.v0, p_a, self.p_m, self.m, q_a, d_prevk, self.delta_t, self.delta_x)
 
                 edges_data.append(edge)
             iterations.append(edges_data)
