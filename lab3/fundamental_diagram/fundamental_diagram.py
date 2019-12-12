@@ -79,10 +79,10 @@ if __name__ == "__main__":
     plt.scatter(vals['density'], vals['speed'], color='gray')
 
     x,y,r2 = greenshield(vals)
-    plt.plot(x, y, label='Greenshields R2: {}'.format(round(r2,2)))
+    plt.plot(x, y, label='Greenshields $R^2$: {}'.format(round(r2,2)))
 
     x,y,r2 = greenberg(vals)
-    plt.plot(x, y, label='Greenberg R2: {}'.format(round(r2,2)))
+    plt.plot(x, y, label='Greenberg $R^2$: {}'.format(round(r2,2)))
 
     plt.axis(xmin=0,ymin=0)
     plt.xlabel('Density (#veh/km)')
