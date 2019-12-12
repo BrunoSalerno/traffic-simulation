@@ -60,13 +60,13 @@ def extractAndPlot(xml, feature):
     #     vals = [v[d] for v in values]
     #label = '{} {}'.format(feature, detectors[d])
 
-    plt.plot(time_range, mean, label=feature)
+    plt.plot(time_range, mean, label='detector ' + feature)
     return time_range
 
 def extractAndPlotMeanSpaceSpeed(xml, xs):
     xml = ET.parse(file2)
     space_mean_speed = fetch_edge_attrs(xml.getroot(), 'link4', ['speed'])['speed']
-    plt.plot(xs, space_mean_speed, label="space mean speed", linestyle='dashed')
+    plt.plot(xs, space_mean_speed, label="edgeData speed", linestyle='dashed')
 
 if __name__ == "__main__":
     file = sys.argv[1]
