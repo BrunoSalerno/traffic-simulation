@@ -23,6 +23,21 @@ def extractMeanFeature(data,feature, detectors):
 
     return times
 
+def fetch_edge_attrs(data, edge_id, attrs):
+    values = {}
+    intervals = data.findall('interval')
+    for interval in intervals:
+        end = float(interval.get('end'))
+        if (end / 60) >= 15: # warmup check
+            for edge in interval:
+                if edge.get('id') == edge_id:
+                    for attr in attrs:
+                        if not attr in values:
+                            values[attr] = []
+                        if edge.get(attr) is not None:
+                            values[attr].append(float(edge.get(attr)))
+    return values
+
 def edge_density(data):
     detectors = ['il1','il2','il3']
 
@@ -35,8 +50,13 @@ def edge_density(data):
     densities = flows / speeds
 
     p_a = np.sum(densities,1)
-    effective_densities = p_a/len(detectors)
+    effective_densities = p_a#/len(detectors)
     return [effective_densities, time_intervals]
+
+def extract_and_plot_edge_density(xs):
+    xml = ET.parse(file2)
+    space_mean_speed = fetch_edge_attrs(xml.getroot(), 'link4', ['density'])['density']
+    plt.plot(xs, space_mean_speed, label="edgeData density", linestyle='dashed')
 
 if __name__ == "__main__":
     file = sys.argv[1]
@@ -44,11 +64,16 @@ if __name__ == "__main__":
     data = tree.getroot()
 
     ed_densities, t_intervals = edge_density(data)
-    plt.plot(t_intervals, ed_densities)
+    plt.plot(t_intervals, ed_densities, label="density")
 
-    plt.title('Effective Density - Edge 4 (loop in the end)')
+    file2 = sys.argv[2]
+
+    extract_and_plot_edge_density(t_intervals)
+
+    plt.title('Density - Edge 4 (loop in the end)')
     plt.xlabel('Duration (minutes)')
     plt.ylabel('Density (veh/km)')
     plt.grid(True)
+    plt.legend()
     plt.show()
 
