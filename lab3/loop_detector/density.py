@@ -38,9 +38,7 @@ def fetch_edge_attrs(data, edge_id, attrs):
                             values[attr].append(float(edge.get(attr)))
     return values
 
-def edge_density(data):
-    detectors = ['il1','il2','il3']
-
+def edge_density(data, detectors):
     flows_dict = extractMeanFeature(data, 'flow', detectors)
     speed_dict = extractMeanFeature(data, 'harmonicMeanSpeed', detectors)
     time_intervals = np.array(list(flows_dict.keys()))
@@ -63,7 +61,8 @@ if __name__ == "__main__":
     tree = ET.parse(file)
     data = tree.getroot()
 
-    ed_densities, t_intervals = edge_density(data)
+    detectors = ['il1-end','il2-end','il3-end']
+    ed_densities, t_intervals = edge_density(data, detectors)
     plt.plot(t_intervals, ed_densities, label="density")
 
     file2 = sys.argv[2]

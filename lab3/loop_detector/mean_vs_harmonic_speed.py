@@ -44,8 +44,7 @@ def extractMeanFeature(xml,feature, detectors):
 
     return times
 
-def extractAndPlot(xml, feature):
-    detectors = ['il1', 'il2', 'il3']
+def extractAndPlot(xml, feature, detectors):
     data = extractMeanFeature(xml, feature, detectors)
 
     time_range = list(data.keys())
@@ -71,13 +70,14 @@ def extractAndPlotMeanSpaceSpeed(xml, xs):
 if __name__ == "__main__":
     file = sys.argv[1]
 
-    extractAndPlot(file, 'speed')
-    time_range = extractAndPlot(file, 'harmonicMeanSpeed')
+    detectors = ['il1-end', 'il2-end', 'il3-end']
+    extractAndPlot(file, 'speed', detectors)
+    time_range = extractAndPlot(file, 'harmonicMeanSpeed', detectors)
 
     file2 = sys.argv[2]
     extractAndPlotMeanSpaceSpeed(file2, time_range)
 
-    plt.title('Average vs Harmonic Speed - Edge 4 (loop in the middle)')
+    plt.title('Average vs Harmonic Speed - Edge 4 (loop in the end)')
     plt.xlabel('Duration (minutes)')
     plt.ylabel('Speed (m/s)')
     plt.grid(True)
