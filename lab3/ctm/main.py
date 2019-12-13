@@ -49,11 +49,16 @@ if __name__ == '__main__':
 
     plot_intervals(output,'p_a')
     plt.ylabel('Density (#veh/km)')
-
-    #for i in range(17,23):
-    #    plot_interval(i, output, 'q_a')
-
     plt.xlabel('Iteration')
+    plt.title('Density - CTM with SUMO input values')
+    plt.legend()
+    plt.show()
+
+
+    plot_intervals(output,'q_a')
+    plt.ylabel('Flow (#veh/h)')
+    plt.xlabel('Iteration')
+    plt.title('Flow - CTM with SUMO input values (#veh/h)')
     plt.legend()
     plt.show()
 

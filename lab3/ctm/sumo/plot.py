@@ -40,8 +40,14 @@ if __name__ == '__main__':
     print(list(flows[:,0]))
     print(flows[0])
 
-    densities[0:60].plot()
-    #plt.plot(flows[0:60])
+    densities[:60].plot()
     plt.ylabel('Density (#veh/km)')
     plt.xlabel('Iteration')
+    plt.title('Density - SUMO simulation')
+    plt.show()
+
+    plt.plot(flows[:60])
+    plt.ylabel('Flow (#veh/h)')
+    plt.xlabel('Iteration')
+    plt.title('Flow - SUMO simulation')
     plt.show()
