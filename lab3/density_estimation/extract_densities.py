@@ -101,7 +101,7 @@ if __name__ == "__main__":
 
     minutes = np.array(range(len(dens))) * 5 + 15
     plt.plot(minutes,dens, label='Density conservation law')
-    plt.plot(minutes,dens_naive, label='Naïve density', linestyle='dashed', color='black')
+    plt.plot(minutes,dens_naive, label='Density #veh/length', linestyle='dashed', color='black')
     plt.plot(minutes,sumo_densities, label='SUMO edge density')
     plt.plot(traci_xs,traci_densities, label='SUMO tracy density')
 
