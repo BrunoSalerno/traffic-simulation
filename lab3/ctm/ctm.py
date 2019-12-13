@@ -1,7 +1,7 @@
 import random
 
 class Edge:
-    def __init__(self, tau, v0, p_a, p_m, m, q_a, d_prevk, delta_t, delta_x):
+    def __init__(self, tau, v0, p_a, p_m, m, q_a, d_prevk, delta_t, delta_x, c):
         self.tau = tau
         self.v0 = v0
         self.p_a = p_a
@@ -11,9 +11,12 @@ class Edge:
         self.d_prevk = d_prevk
         self.delta_t = delta_t
         self.delta_x = delta_x
+        self.capacity = c # capacity
 
     # total
     def c(self):
+        if self.capacity:
+            return self.capacity
         return self.pc() * self.v0
 
     # total
@@ -71,16 +74,16 @@ class Simulation:
 
     # To create a bottleneck in any given edge
     # we just set p_m to a low value
-    def add_bottleneck(self, edge, v0, interval=None):
-        self.bottlenecks[edge]={'v0': v0, 'interval': interval}
+    def add_bottleneck(self, edge, capacity, interval=None):
+        self.bottlenecks[edge]={'capacity': capacity, 'interval': interval}
 
     def bottleneck_if_exist(self, edge, interval):
         if edge in self.bottlenecks:
             bottleneck = self.bottlenecks[edge]
             if bottleneck['interval']:
-                return bottleneck['v0'] if interval >= bottleneck['interval'] else None
+                return bottleneck['capacity'] if interval >= bottleneck['interval'] else None
             else:
-                return bottleneck['v0']
+                return bottleneck['capacity']
         else:
             return None
 
@@ -105,7 +108,7 @@ class Simulation:
                     q_a = q_as_for_initial_iter[e]
 
                 ## Bottleneck ############################
-                bottleneck_v0 = self.bottleneck_if_exist(e, i)
+                bottleneck_capacity = self.bottleneck_if_exist(e, i)
                 ##########################################
 
                 if prev_edge:
@@ -123,7 +126,7 @@ class Simulation:
                         output[e] = []
                     output[e].append({'p_a':p_a,'q0':q0,'q1':q1,'d': prev_edge.d(), 's': prev_edge.s(), 'q_a':q_a})
 
-                edge = Edge(self.tau, bottleneck_v0 or self.v0, p_a, self.p_m, self.m, q_a, d_prevk, self.delta_t, self.delta_x)
+                edge = Edge(self.tau, self.v0, p_a, self.p_m, self.m, q_a, d_prevk, self.delta_t, self.delta_x, bottleneck_capacity)
 
                 edges_data.append(edge)
             iterations.append(edges_data)
