@@ -44,6 +44,7 @@ if __name__ == '__main__':
     sim = Simulation(edges, m, tau, n_iters, delta_t, delta_x, v0, p_m)
 
     sim.add_bottleneck(edge=2, capacity=300, interval=20)
+
     output = sim.run(p_as_for_initial_edge = p_as_edge1, p_as_for_initial_iter=p_as_iter1, q_as_for_initial_edge = q_as_edge1, q_as_for_initial_iter = q_as_iter1)
 
     #plot_intervals(output,'q_a',[1,2,3,4,5])
@@ -51,11 +52,14 @@ if __name__ == '__main__':
 
     plot_intervals(output,'p_a')
     plt.ylabel('Density (#veh/km)')
-
-    #for i in range(17,23):
-    #    plot_interval(i, output, 'q_a')
-
     plt.xlabel('Iteration')
+    plt.title('Density - bottleneck at 2nd edge in int 20')
     plt.legend()
     plt.show()
 
+    plot_intervals(output,'q_a')
+    plt.ylabel('Flow (#veh/h)')
+    plt.title('Flow - bottleneck at 2nd edge in int 20')
+    plt.xlabel('Iteration')
+    plt.legend()
+    plt.show()
