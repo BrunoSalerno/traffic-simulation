@@ -54,24 +54,11 @@ def densities(density_0,deltas_q):
 
     return res
 
-def densities_naive(density_0,deltas_quant):
-    delta_x = 1
-
-    res = np.array([density_0])
-
-    delta_density = deltas_quant / delta_x
-
-    for i in range(1, len(deltas_quant)):
-        prevdens = res[-1]
-        res = np.append(res, prevdens + delta_density[i])
-
-    return res
-
 def traci_densities():
     links_d = pd.read_csv("output/links_1runs.csv")
     dens = links_d['link4']
     print(dens)
-    return [dens.index+15, dens]
+    return [dens.index+16, dens]
 
 if __name__ == "__main__":
     filename = sys.argv[1]
@@ -93,15 +80,8 @@ if __name__ == "__main__":
 
     dens = densities(sumo_densities[0], deltas_q)
 
-    entered_quant = np.array(vals['il1_start']['nVehContrib'])+np.array(vals['il2_start']['nVehContrib']) +np.array(vals['il3_start']['nVehContrib'])
-    left_quant = np.array(vals['il1_end']['nVehContrib'])+np.array(vals['il2_end']['nVehContrib']) +np.array(vals['il3_end']['nVehContrib'])
-    deltas_quant = entered_quant - left_quant
-
-    dens_naive = densities_naive(sumo_densities[0],deltas_quant)
-
     minutes = np.array(range(len(dens))) * 5 + 15
     plt.plot(minutes,dens, label='Density conservation law')
-    plt.plot(minutes,dens_naive, label='Density #veh/length', linestyle='dashed', color='black')
     plt.plot(minutes,sumo_densities, label='SUMO edge density')
     plt.plot(traci_xs,traci_densities, label='SUMO tracy density')
 
