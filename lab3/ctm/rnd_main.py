@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import random
+import numpy.random as nprandom
 
 from ctm import Simulation
 
@@ -35,11 +36,11 @@ if __name__ == '__main__':
     # delta_t < delta_x / v0
     # Treiber et al 2013, p. 100
 
-    p_as_edge1 = np.repeat(40 + random.randint(-2,2),60)
-    p_as_iter1 = np.repeat(40 + random.randint(-2,2),6)
+    p_as_edge1 = np.repeat(40, 60)
+    p_as_iter1 = np.repeat(40, 6)
 
-    q_as_edge1 = np.repeat(600 + random.randint(-2,2),60)
-    q_as_iter1 = np.repeat(600 + random.randint(-2,2),6)
+    q_as_edge1 = np.repeat(600, 60)
+    q_as_iter1 = np.repeat(600, 6)
 
     sim = Simulation(edges, m, tau, n_iters, delta_t, delta_x, v0, p_m)
 
@@ -53,13 +54,13 @@ if __name__ == '__main__':
     plot_intervals(output,'p_a')
     plt.ylabel('Density (#veh/km)')
     plt.xlabel('Iteration')
-    plt.title('Density - CTM with rnd values. Bottleneck at 2nd edge in int 20')
+    plt.title('Density - CTM. Bottleneck at 2nd edge in int 20')
     plt.legend()
     plt.show()
 
     plot_intervals(output,'q_a')
     plt.ylabel('Flow (#veh/h)')
-    plt.title('Flow - CTM with rnd values. Bottleneck at 2nd edge in int 20')
+    plt.title('Flow - CTM. Bottleneck at 2nd edge in int 20')
     plt.xlabel('Iteration')
     plt.legend()
     plt.show()
