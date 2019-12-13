@@ -23,16 +23,25 @@ if __name__ == '__main__':
     filename = sys.argv[1]
     xml = ET.parse(filename)
 
-    densities = fetch_edge_attr(xml.getroot(), 'density')
-    df = pd.DataFrame(densities)
-    print(df)
+    densities = pd.DataFrame(fetch_edge_attr(xml.getroot(), 'density'))
+    del densities['link5']
 
-    print(list(df['link1']))
+    print("densities")
+    print(densities)
+    print(list(densities['link1']))
 
-    for l in df:
-        print(df[l][0])
+    speeds = pd.DataFrame(fetch_edge_attr(xml.getroot(), 'speed'))
+    del speeds['link5']
 
-    df[0:60].plot()
+    # flow = density * speed
+    flows = np.multiply(speeds.values, densities.values)
+
+    print("flows")
+    print(list(flows[:,0]))
+    print(flows[0])
+
+    densities[0:60].plot()
+    #plt.plot(flows[0:60])
     plt.ylabel('Density (#veh/km)')
     plt.xlabel('Iteration')
     plt.show()

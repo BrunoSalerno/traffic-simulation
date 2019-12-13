@@ -12,39 +12,48 @@ class Edge:
         self.delta_t = delta_t
         self.delta_x = delta_x
 
+    # total
     def c(self):
         return self.pc() * self.v0
 
+    # total
     def pc(self):
         return 1/(self.v0 * self.tau + (1 / self.p_m))
 
+    # per lane
     def q_e(self, p):
         p_m = self.p_m / self.m
-        if p <= self.pc():
+        pc = self.pc() / self.m
+        if p <= pc:
             return self.v0 * p
-        elif p > self.pc() and p <= p_m:
-            return 1/self.tau * (1 - p/p_m)
+        elif p > pc and p <= p_m:
+            return (1/self.tau) * (1 - (p/p_m))
         else:
             return 0
 
+    # total
     def s(self):
-        if self.p_a > (self.pc() * self.m):
+        if self.p_a > self.pc():
             return self.q_a
         else:
             return self.c()
 
+    # total
     def d(self):
-        if self.p_a <= (self.pc() * self.m):
+        if self.p_a <= self.pc():
             return self.q_a
         else:
             return self.c()
 
+    # total
     def q0(self):
         return min(self.d_prevk,self.s())
 
+    # total
     def p_a_next(self, q1):
-        return self.p_a + 1/self.delta_x * (self.q0() - q1) * self.delta_t
+        return self.p_a + (1/self.delta_x) * (self.q0() - q1) * self.delta_t
 
+    # total
     def q_a_next(self, q1):
         return self.m * self.q_e(self.p_a_next(q1)/self.m)
 
@@ -75,7 +84,7 @@ class Simulation:
         else:
             return None
 
-    def run(self, p_as_for_initial_edge = [], p_as_for_initial_iter=[]):
+    def run(self, p_as_for_initial_edge = [], p_as_for_initial_iter=[], q_as_for_initial_edge = [], q_as_for_initial_iter = []):
         output = {}
         iterations = []
 
@@ -88,12 +97,12 @@ class Simulation:
 
                 if e == 0:
                     p_a = p_as_for_initial_edge[i]
-                    q_a = p_a * self.v0
+                    q_a = q_as_for_initial_edge[i]
                     d_prevk = q_a
 
                 if i == 0 and e > 0:
                     p_a = p_as_for_initial_iter[e]
-                    q_a = p_a * self.v0
+                    q_a = q_as_for_initial_iter[e]
 
                 ## Bottleneck ############################
                 bottleneck_v0 = self.bottleneck_if_exist(e, i)
@@ -109,6 +118,7 @@ class Simulation:
                     q_a = prev_edge_tminus1.q_a_next(q1_tminus1)
                     p_a = prev_edge_tminus1.p_a_next(q1_tminus1)
 
+                    print('q0',q0,'q1',q1,'q1_tminus1',q1_tminus1,'q_a',q_a,'p_a',p_a)
                     if not e in output:
                         output[e] = []
                     output[e].append({'p_a':p_a,'q0':q0,'q1':q1,'d': prev_edge.d(), 's': prev_edge.s(), 'q_a':q_a})
